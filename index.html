@@ -384,38 +384,6 @@
     margin-top: 2px;
   }
 
-  /* trending tab */
-  .trend-section{ margin-bottom: 26px; }
-  .trend-heading{
-    font-family: ui-monospace, "SF Mono", Consolas, monospace;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--gold);
-    margin: 0 0 4px;
-  }
-  .trend-sub{
-    font-size: 13px;
-    color: var(--chalk-muted);
-    margin: 0 0 12px;
-  }
-  .trend-row{
-    display:grid;
-    grid-template-columns: 22px 1fr 70px;
-    align-items:center;
-    gap: 10px;
-    padding: 9px 10px;
-    border-bottom: 1px solid var(--line);
-  }
-  .trend-row:last-child{ border-bottom: none; }
-  .trend-pos{
-    font-family: ui-monospace, "SF Mono", Consolas, monospace;
-    font-size: 11px;
-    color: var(--chalk-muted);
-    font-weight: 700;
-  }
-
   footer{
     margin-top: 34px;
     padding-top: 16px;
@@ -449,7 +417,6 @@
     <button class="tab-btn active" id="tabWire">Wire</button>
     <button class="tab-btn" id="tabTop100">Top 100 Tracker</button>
     <button class="tab-btn" id="tabVegas">Vegas Top 100</button>
-    <button class="tab-btn" id="tabTrending">Trending Up</button>
     <button class="tab-btn" id="tabProps">Betting Lines</button>
   </div>
 
@@ -471,20 +438,6 @@
       <input class="search-input" id="vegasSearch" placeholder="Search player or team...">
     </div>
     <div class="rank-table" id="vegasTable"></div>
-  </div>
-
-  <div class="view" id="viewTrending">
-    <p class="detail" style="margin-bottom:18px;">Biggest risers since the last update on each board. Consensus = movement in the Top 100 Tracker (rank vs. prev). Vegas = movement in the Vegas Top 100 (rank vs. prevVegas), driven by shifting team totals and props.</p>
-    <div class="trend-section">
-      <p class="trend-heading">Top 10 Risers — Consensus</p>
-      <p class="trend-sub">Biggest jumps in the Top 100 Tracker this update.</p>
-      <div id="trendConsensusTable"></div>
-    </div>
-    <div class="trend-section">
-      <p class="trend-heading">Top 10 Risers — Vegas</p>
-      <p class="trend-sub">Biggest jumps in the Vegas Top 100 this update.</p>
-      <div id="trendVegasTable"></div>
-    </div>
   </div>
 
   <div class="view" id="viewProps">
@@ -1153,59 +1106,6 @@ document.getElementById("vegasSearch").addEventListener("input", (e) => {
   renderVegasTracker(e.target.value);
 });
 
-// Trending Up tab: top 10 risers on each board this update.
-function renderTrendConsensus(){
-  const table = document.getElementById("trendConsensusTable");
-  const risers = RANKINGS
-    .filter(e => e.prev !== null)
-    .map(e => ({ ...e, delta: e.prev - e.rank }))
-    .filter(e => e.delta > 0)
-    .sort((a, b) => b.delta - a.delta)
-    .slice(0, 10);
-
-  if(risers.length === 0){
-    table.innerHTML = '<div class="empty">No consensus risers this update.</div>';
-    return;
-  }
-
-  table.innerHTML = risers.map((e, i) => `
-    <div class="trend-row">
-      <span class="trend-pos">${i + 1}</span>
-      <div class="rank-name-wrap">
-        <div class="rank-name"><a href="${fpUrl(e.name)}" target="_blank" rel="noopener">${e.name}</a></div>
-        <div class="rank-meta">${e.pos} · ${e.team} · now #${e.rank}</div>
-      </div>
-      <span class="rank-move move-up">▲ ${e.delta}</span>
-    </div>
-  `).join("");
-}
-
-function renderTrendVegas(){
-  const table = document.getElementById("trendVegasTable");
-  const risers = VEGAS_RANKINGS
-    .filter(e => e.prevVegas !== null)
-    .map(e => ({ ...e, delta: e.prevVegas - e.rank }))
-    .filter(e => e.delta > 0)
-    .sort((a, b) => b.delta - a.delta)
-    .slice(0, 10);
-
-  if(risers.length === 0){
-    table.innerHTML = '<div class="empty">No Vegas risers this update.</div>';
-    return;
-  }
-
-  table.innerHTML = risers.map((e, i) => `
-    <div class="trend-row">
-      <span class="trend-pos">${i + 1}</span>
-      <div class="rank-name-wrap">
-        <div class="rank-name"><a href="${fpUrl(e.name)}" target="_blank" rel="noopener">${e.name}</a></div>
-        <div class="rank-meta">${e.pos} · ${e.team} · now #${e.rank}</div>
-      </div>
-      <span class="rank-move move-up">▲ ${e.delta}</span>
-    </div>
-  `).join("");
-}
-
 // Betting Lines tab: top 10 fantasy-relevant season-long player prop lines,
 // refreshed manually as part of an update (search sportsbook/news sites for
 // current lines, don't fabricate specific numbers/odds - see SKILL.md).
@@ -1298,9 +1198,6 @@ document.getElementById("tabTop100").addEventListener("click", () => {
 document.getElementById("tabVegas").addEventListener("click", () => {
   setActiveTab("tabVegas", "viewVegas");
 });
-document.getElementById("tabTrending").addEventListener("click", () => {
-  setActiveTab("tabTrending", "viewTrending");
-});
 document.getElementById("tabProps").addEventListener("click", () => {
   setActiveTab("tabProps", "viewProps");
 });
@@ -1309,7 +1206,6 @@ const TABS = [
   ["tabWire", "viewWire"],
   ["tabTop100", "viewTop100"],
   ["tabVegas", "viewVegas"],
-  ["tabTrending", "viewTrending"],
   ["tabProps", "viewProps"]
 ];
 
@@ -1337,8 +1233,6 @@ renderFilters();
 renderFeed();
 renderTracker("");
 renderVegasTracker("");
-renderTrendConsensus();
-renderTrendVegas();
 renderPropLines();
 </script>
 </body>
