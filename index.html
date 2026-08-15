@@ -5,17 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Wire — Fantasy Football Updates</title>
 <style>
-  :root{
-    --bg: #16261c;
-    --surface: #1f3527;
-    --surface-2: #274330;
-    --line: #3a5a44;
-    --chalk: #f2eee0;
-    --chalk-muted: #a7bcab;
-    --gold: #e6b93d;
-    --red: #d9694f;
-    --blue: #6fa3c9;
-    --violet: #a58bc9;
+  :root, body.theme-light{
+    --bg: #f4ecd8;
+    --surface: #fffefa;
+    --surface-2: #ece1c4;
+    --line: #d6c6a0;
+    --chalk: #2b2213;
+    --chalk-muted: #7d6f52;
+    --gold: #c17d1f;
+    --red: #b8483d;
+    --blue: #2f6f93;
+    --violet: #7a5a9e;
+  }
+  body.theme-navy{
+    --bg: #0f1b2d;
+    --surface: #16273f;
+    --surface-2: #1c3150;
+    --line: #2d4666;
+    --chalk: #eef2f7;
+    --chalk-muted: #93a4bd;
+    --gold: #e0932e;
+    --red: #e2564f;
+    --blue: #5aa9e6;
+    --violet: #8fa6d9;
+  }
+  body.theme-slate{
+    --bg: #1c1f24;
+    --surface: #262a31;
+    --surface-2: #2f343c;
+    --line: #40464f;
+    --chalk: #f5f5f0;
+    --chalk-muted: #9aa0a8;
+    --gold: #4fc3f7;
+    --red: #ef5f5f;
+    --blue: #7fd4a8;
+    --violet: #b39ddb;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
@@ -67,7 +91,22 @@
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px dashed var(--line);
+    display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
   }
+
+  /* theme switcher */
+  .theme-switch{
+    display:flex; align-items:center; gap:6px;
+  }
+  .theme-dot{
+    width:16px; height:16px;
+    border-radius:50%;
+    border:2px solid transparent;
+    cursor:pointer;
+    padding:0;
+    box-shadow: 0 0 0 1px var(--line);
+  }
+  .theme-dot.active{ border-color: var(--chalk); }
 
   /* filters */
   .filters{
@@ -154,12 +193,6 @@
     line-height: 1.3;
     margin: 0 0 6px;
   }
-  .headline .impact{
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: var(--gold);
-    text-underline-offset: 3px;
-  }
   .detail{
     font-size: 14px;
     line-height: 1.5;
@@ -177,6 +210,13 @@
     border: 1px solid var(--line);
     border-radius: 20px;
     padding: 3px 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .player-chip:hover{
+    border-color: var(--gold);
+    color: var(--gold);
   }
 
   .empty{
@@ -258,6 +298,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .rank-name a{
+    color: inherit;
+    text-decoration: none;
+  }
+  .rank-name a:hover{
+    color: var(--gold);
+    text-decoration: underline;
+  }
   .rank-meta{
     font-family: ui-monospace, "SF Mono", Consolas, monospace;
     font-size: 10.5px;
@@ -327,14 +375,21 @@
   }
 </style>
 </head>
-<body>
+<body class="theme-light">
 <div class="wrap">
 
   <header>
     <div class="eyebrow">Live wire · 10-team PPR</div>
     <h1>The Wire</h1>
     <p class="sub">Roster moves, coaching changes, and what they mean for your lineup.</p>
-    <div class="updated" id="updatedStamp">Last update: Aug 15, 2026</div>
+    <div class="updated">
+      <span id="updatedStamp">Last update: Aug 15, 2026</span>
+      <span class="theme-switch" id="themeSwitch">
+        <button class="theme-dot active" data-theme="theme-light" style="background:#c17d1f" title="Desert Light" aria-label="Desert Light theme"></button>
+        <button class="theme-dot" data-theme="theme-navy" style="background:#e0932e" title="Gridiron Navy" aria-label="Gridiron Navy theme"></button>
+        <button class="theme-dot" data-theme="theme-slate" style="background:#4fc3f7" title="Chalk Slate" aria-label="Chalk Slate theme"></button>
+      </span>
+    </div>
   </header>
 
   <div class="tabs">
@@ -386,6 +441,33 @@
 </div>
 
 <script>
+// FantasyPros profile links. FantasyPros slugs aren't a clean function of
+// a player's name (Jr./Sr. gets dropped for some players but kept for
+// others, "St." surnames squish irregularly) - they're editorially assigned
+// per player. FP_SLUG_EXCEPTIONS holds every verified case where the
+// default slugify() guess is wrong. Add to it whenever a new player's link
+// turns out to 404 - don't try to "fix" the default algorithm for one name.
+const FP_SLUG_EXCEPTIONS = {
+  "Travis Etienne Jr.": "travis-etienne",
+  "Michael Pittman Jr.": "michael-pittman",
+  "Amon-Ra St. Brown": "amonra-stbrown",
+  "Jaxon Smith-Njigba": "jaxon-smith-njigba"
+};
+
+function fpSlug(name){
+  if (FP_SLUG_EXCEPTIONS[name]) return FP_SLUG_EXCEPTIONS[name];
+  return name
+    .replace(/[.'’]/g, "")
+    .replace(/-/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-");
+}
+
+function fpUrl(name){
+  return `https://www.fantasypros.com/nfl/players/${fpSlug(name)}.php`;
+}
+
 const ENTRIES = [
   {
     date: "2026-08-15",
@@ -673,7 +755,7 @@ function renderFeed(){
         <p class="headline">${entry.headline}</p>
         <p class="detail">${entry.detail}</p>
         <div class="players">
-          ${entry.players.map(p => `<span class="player-chip">${p}</span>`).join("")}
+          ${entry.players.map(p => `<a class="player-chip" href="${fpUrl(p)}" target="_blank" rel="noopener">${p}</a>`).join("")}
         </div>
       `;
       feed.appendChild(card);
@@ -811,7 +893,7 @@ function renderTracker(query){
     <div class="rank-row">
       <span class="rank-num">${e.rank}</span>
       <div class="rank-name-wrap">
-        <div class="rank-name">${e.name}</div>
+        <div class="rank-name"><a href="${fpUrl(e.name)}" target="_blank" rel="noopener">${e.name}</a></div>
         <div class="rank-meta">${e.pos} · ${e.team}</div>
       </div>
       <span class="rank-move">${renderMove(e)}</span>
@@ -952,7 +1034,7 @@ function renderVegasTracker(query){
     <div class="rank-row">
       <span class="rank-num">${e.rank}</span>
       <div class="rank-name-wrap">
-        <div class="rank-name">${e.name}</div>
+        <div class="rank-name"><a href="${fpUrl(e.name)}" target="_blank" rel="noopener">${e.name}</a></div>
         <div class="rank-meta">${e.pos} · ${e.team}</div>
       </div>
       <span class="rank-move">${renderVegasMove(e)}</span>
@@ -983,7 +1065,7 @@ function renderTrendConsensus(){
     <div class="trend-row">
       <span class="trend-pos">${i + 1}</span>
       <div class="rank-name-wrap">
-        <div class="rank-name">${e.name}</div>
+        <div class="rank-name"><a href="${fpUrl(e.name)}" target="_blank" rel="noopener">${e.name}</a></div>
         <div class="rank-meta">${e.pos} · ${e.team} · now #${e.rank}</div>
       </div>
       <span class="rank-move move-up">▲ ${e.delta}</span>
@@ -1009,7 +1091,7 @@ function renderTrendVegas(){
     <div class="trend-row">
       <span class="trend-pos">${i + 1}</span>
       <div class="rank-name-wrap">
-        <div class="rank-name">${e.name}</div>
+        <div class="rank-name"><a href="${fpUrl(e.name)}" target="_blank" rel="noopener">${e.name}</a></div>
         <div class="rank-meta">${e.pos} · ${e.team} · now #${e.rank}</div>
       </div>
       <span class="rank-move move-up">▲ ${e.delta}</span>
@@ -1043,6 +1125,19 @@ function setActiveTab(tabId, viewId){
     document.getElementById(v).classList.toggle("active", v === viewId);
   });
 }
+
+// theme switcher
+const THEME_CLASSES = ["theme-light", "theme-navy", "theme-slate"];
+function setTheme(themeClass){
+  document.body.classList.remove(...THEME_CLASSES);
+  document.body.classList.add(themeClass);
+  document.querySelectorAll(".theme-dot").forEach(dot => {
+    dot.classList.toggle("active", dot.dataset.theme === themeClass);
+  });
+}
+document.querySelectorAll(".theme-dot").forEach(dot => {
+  dot.addEventListener("click", () => setTheme(dot.dataset.theme));
+});
 
 renderFilters();
 renderFeed();
