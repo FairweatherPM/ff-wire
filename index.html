@@ -147,8 +147,7 @@
     white-space: nowrap;
     font-weight: 700;
   }
-  .hashline .marks{
-    flex:1;
+  .hashline .marks{    flex:1;
     height: 8px;
     background-image: repeating-linear-gradient(
       to right, var(--line) 0 2px, transparent 2px 14px
@@ -297,8 +296,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  .rank-name a{
+  }  .rank-name a{
     color: inherit;
     text-decoration: none;
   }
@@ -404,7 +402,7 @@
     <h1>The Wire</h1>
     <p class="sub">Roster moves, coaching changes, and what they mean for your lineup.</p>
     <div class="updated">
-      <span id="updatedStamp">Last update: Aug 15, 2026</span>
+      <span id="updatedStamp">Last update: Aug 16, 2026</span>
       <span class="theme-switch" id="themeSwitch">
         <button class="theme-dot active" data-theme="theme-light" style="background:#c17d1f" title="Desert Light" aria-label="Desert Light theme"></button>
         <button class="theme-dot" data-theme="theme-navy" style="background:#e0932e" title="Gridiron Navy" aria-label="Gridiron Navy theme"></button>
@@ -447,8 +445,7 @@
 
   <footer>
     Ask Claude to "update the wire" in a new chat to refresh this feed with the latest news.<br>
-    Compiled from training camp reports, PFF, RotoBaller, FanDuel Research &amp; others.
-  </footer>
+    Compiled from training camp reports, PFF, RotoBaller, FanDuel Research &amp; others.  </footer>
 
 </div>
 
@@ -481,6 +478,62 @@ function fpUrl(name){
 }
 
 const ENTRIES = [
+  {
+    date: "2026-08-16",
+    category: "rookie",
+    tag: "Rookie",
+    headline: "Jeremiyah Love looks like Arizona's lead back after a 14-touch preseason opener",
+    detail: "The first-round rookie (on a $53M guaranteed deal) played 75% of Arizona's snaps across three preseason drives and out-touched Tyler Allgeier by a wide margin, even though OC Nathaniel Hackett hasn't formally named a starter. Enough of a workload signal to move him into the Top 100 Tracker as a flex-worthy RB2.",
+    players: ["Jeremiyah Love", "Tyler Allgeier"]
+  },
+  {
+    date: "2026-08-16",
+    category: "injury",
+    tag: "Injury",
+    headline: "Marcus Mariota (MCL) headed for missed time as Washington's backup QB",
+    detail: "Mariota sprained his right MCL in Friday's preseason loss to Miami and is expected to miss time into the regular season. Jayden Daniels was rested and is unaffected, but it thins Washington's QB room down to Sam Hartman and rookie Athan Kaliakmanis behind him.",
+    players: ["Marcus Mariota", "Jayden Daniels"]
+  },
+  {
+    date: "2026-08-16",
+    category: "injury",
+    tag: "Injury",
+    headline: "Isiah Pacheco (MCL) expected back for Week 1 in Detroit's backfield",
+    detail: "Pacheco is dealing with a sprained MCL that's kept him out of preseason work, but the Lions expect him ready for the opener. Worth monitoring as a change-of-pace option behind David Montgomery once healthy.",
+    players: ["Isiah Pacheco"]
+  },
+  {
+    date: "2026-08-16",
+    category: "depth",
+    tag: "Depth Chart",
+    headline: "Tyjae Spears out-snapping Tony Pollard in Tennessee's new offense",
+    detail: "Under new OC Brian Daboll, Spears saw more preseason work than Pollard, hinting at a closer 50/50 committee rather than last year's 70/30 split toward Pollard. Worth tightening Spears' draft price a bit.",
+    players: ["Tyjae Spears", "Tony Pollard"]
+  },
+  {
+    date: "2026-08-16",
+    category: "depth",
+    tag: "Depth Chart",
+    headline: "Matthew Golden taking starter reps over Jayden Reed in Green Bay's 12-personnel",
+    detail: "Golden played every 12-personnel snap with the starters in the preseason opener, while Reed was limited to slot work in 11-personnel — a sign Golden has the higher-value role for now.",
+    players: ["Matthew Golden", "Jayden Reed"]
+  },
+  {
+    date: "2026-08-16",
+    category: "injury",
+    tag: "Injury",
+    headline: "Tucker Kraft (ACL) expects limited reps into midseason",
+    detail: "Kraft is progressing well in his ACL recovery but said he expects a capped workload for roughly the first half of the season. Treat him as a streaky, ceiling-capped TE1 early before a likely second-half ramp-up.",
+    players: ["Tucker Kraft"]
+  },
+  {
+    date: "2026-08-16",
+    category: "rookie",
+    tag: "Rookie",
+    headline: "Colbie Young pushing for Cincinnati's third receiver spot behind Chase and Higgins",
+    detail: "The fourth-round rookie split preseason snaps with Tee Higgins and got 12-personnel run, putting incumbent Andrei Iosivas' depth-chart spot in real jeopardy. Deep-league watch only for now behind two entrenched starters.",
+    players: ["Colbie Young", "Andrei Iosivas"]
+  },
   {
     date: "2026-08-15",
     category: "depth",
@@ -541,8 +594,7 @@ const ENTRIES = [
     date: "2026-08-15",
     category: "injury",
     tag: "Injury",
-    headline: "J.K. Dobbins' hamstring flares up again in Denver",
-    detail: "Dobbins is back to limited practice after a soft-tissue issue, but his multi-year injury history keeps him a game-to-game risk. RJ Harvey remains the safer bet for weekly volume; Jonah Coleman is the deep-league handcuff to watch.",
+    headline: "J.K. Dobbins' hamstring flares up again in Denver",    detail: "Dobbins is back to limited practice after a soft-tissue issue, but his multi-year injury history keeps him a game-to-game risk. RJ Harvey remains the safer bet for weekly volume; Jonah Coleman is the deep-league handcuff to watch.",
     players: ["J.K. Dobbins", "RJ Harvey", "Jonah Coleman"]
   },
   {
@@ -691,8 +743,7 @@ const ENTRIES = [
   },
   {
     date: "2026-08-10",
-    category: "coaching",
-    tag: "Coaching",
+    category: "coaching",    tag: "Coaching",
     headline: "Mike McCarthy's pass-heavy history is good news in <span class='impact'>Pittsburgh</span>",
     detail: "New Steelers HC has historically leaned pass-heavy even with strong run games — bullish for Aaron Rodgers' volume and his receivers.",
     players: ["Aaron Rodgers", "DK Metcalf", "Roman Wilson"]
@@ -841,8 +892,7 @@ const RANKINGS = [
   { rank: 14, prev: 14, name: "Brian Thomas Jr.", pos: "WR", team: "JAX" },
   { rank: 15, prev: 15, name: "De'Von Achane", pos: "RB", team: "MIA" },
   { rank: 16, prev: 16, name: "Derrick Henry", pos: "RB", team: "BAL" },
-  { rank: 17, prev: 17, name: "Josh Jacobs", pos: "RB", team: "GB" },
-  { rank: 18, prev: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
+  { rank: 17, prev: 17, name: "Josh Jacobs", pos: "RB", team: "GB" },  { rank: 18, prev: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
   { rank: 19, prev: 19, name: "Drake London", pos: "WR", team: "ATL" },
   { rank: 20, prev: 20, name: "A.J. Brown", pos: "WR", team: "NE" },
   { rank: 21, prev: 21, name: "Trey McBride", pos: "TE", team: "ARI" },
@@ -869,62 +919,63 @@ const RANKINGS = [
   { rank: 42, prev: 42, name: "Jaylen Waddle", pos: "WR", team: "DEN" },
   { rank: 43, prev: 43, name: "DJ Moore", pos: "WR", team: "BUF" },
   { rank: 44, prev: 44, name: "George Pickens", pos: "WR", team: "DAL" },
-  { rank: 45, prev: null, name: "Emeka Egbuka", pos: "WR", team: "TB" },
-  { rank: 46, prev: 45, name: "Courtland Sutton", pos: "WR", team: "DEN" },
-  { rank: 47, prev: 46, name: "Rome Odunze", pos: "WR", team: "CHI" },
-  { rank: 48, prev: 47, name: "Jameson Williams", pos: "WR", team: "DET" },
-  { rank: 49, prev: 48, name: "Chris Olave", pos: "WR", team: "NO" },
-  { rank: 50, prev: 49, name: "DK Metcalf", pos: "WR", team: "PIT" },
-  { rank: 51, prev: 50, name: "Tee Higgins", pos: "WR", team: "CIN" },
-  { rank: 52, prev: 51, name: "Patrick Mahomes", pos: "QB", team: "KC" },
-  { rank: 53, prev: 52, name: "Joe Burrow", pos: "QB", team: "CIN" },
-  { rank: 54, prev: 53, name: "Jalen Hurts", pos: "QB", team: "PHI" },
-  { rank: 55, prev: 54, name: "Sam LaPorta", pos: "TE", team: "DET" },
-  { rank: 56, prev: 55, name: "Deebo Samuel", pos: "WR", team: "SF" },
-  { rank: 57, prev: 56, name: "George Kittle", pos: "TE", team: "SF" },
-  { rank: 58, prev: 57, name: "Jaylen Warren", pos: "RB", team: "PIT" },
-  { rank: 59, prev: 58, name: "Rico Dowdle", pos: "RB", team: "PIT" },
-  { rank: 60, prev: 59, name: "Alec Pierce", pos: "WR", team: "IND" },
-  { rank: 61, prev: 60, name: "Jalen Nailor", pos: "WR", team: "LV" },
-  { rank: 62, prev: 61, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
-  { rank: 63, prev: null, name: "Mike Evans", pos: "WR", team: "SF" },
-  { rank: 64, prev: 62, name: "Rashee Rice", pos: "WR", team: "KC" },
-  { rank: 65, prev: 63, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
-  { rank: 66, prev: 64, name: "Mark Andrews", pos: "TE", team: "BAL" },
-  { rank: 67, prev: 65, name: "David Njoku", pos: "TE", team: "CLE" },
-  { rank: 68, prev: 66, name: "Dallas Goedert", pos: "TE", team: "PHI" },
-  { rank: 69, prev: 67, name: "Justin Herbert", pos: "QB", team: "LAC" },
-  { rank: 70, prev: 68, name: "Baker Mayfield", pos: "QB", team: "TB" },
-  { rank: 71, prev: 69, name: "Kyler Murray", pos: "QB", team: "MIN" },
-  { rank: 72, prev: 70, name: "Quinshon Judkins", pos: "RB", team: "CLE" },
-  { rank: 73, prev: 71, name: "Harold Fannin Jr.", pos: "TE", team: "CLE" },
-  { rank: 74, prev: 72, name: "Javonte Williams", pos: "RB", team: "DAL" },
-  { rank: 75, prev: 73, name: "Bhayshul Tuten", pos: "RB", team: "JAX" },
-  { rank: 76, prev: 74, name: "Tank Bigsby", pos: "RB", team: "JAX" },
-  { rank: 77, prev: 75, name: "Tyjae Spears", pos: "RB", team: "TEN" },
-  { rank: 78, prev: 76, name: "Jordan Addison", pos: "WR", team: "MIN" },
-  { rank: 79, prev: 77, name: "Calvin Ridley", pos: "WR", team: "TEN" },
-  { rank: 80, prev: 78, name: "Keenan Allen", pos: "WR", team: "LAC" },
-  { rank: 81, prev: 79, name: "Christian Watson", pos: "WR", team: "GB" },
-  { rank: 82, prev: 80, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
-  { rank: 83, prev: 81, name: "Roman Wilson", pos: "WR", team: "PIT" },
-  { rank: 84, prev: 82, name: "Kaleb Johnson", pos: "RB", team: "PIT" },
-  { rank: 85, prev: 83, name: "J.K. Dobbins", pos: "RB", team: "DEN" },
-  { rank: 86, prev: 84, name: "Bo Nix", pos: "QB", team: "DEN" },
-  { rank: 87, prev: 85, name: "Brock Purdy", pos: "QB", team: "SF" },
-  { rank: 88, prev: 86, name: "Matthew Stafford", pos: "QB", team: "LAR" },
-  { rank: 89, prev: 87, name: "Evan Engram", pos: "TE", team: "DEN" },
-  { rank: 90, prev: 88, name: "Kyle Pitts", pos: "TE", team: "ATL" },
-  { rank: 91, prev: 89, name: "Tucker Kraft", pos: "TE", team: "GB" },
-  { rank: 92, prev: 90, name: "Colston Loveland", pos: "TE", team: "CHI" },
-  { rank: 93, prev: 91, name: "Jonnu Smith", pos: "TE", team: "PIT" },
-  { rank: 94, prev: 92, name: "C.J. Stroud", pos: "QB", team: "HOU" },
-  { rank: 95, prev: 93, name: "Dak Prescott", pos: "QB", team: "DAL" },
-  { rank: 96, prev: 94, name: "Caleb Williams", pos: "QB", team: "CHI" },
-  { rank: 97, prev: 95, name: "Drake Maye", pos: "QB", team: "NE" },
-  { rank: 98, prev: 96, name: "Trevor Lawrence", pos: "QB", team: "JAX" },
-  { rank: 99, prev: 97, name: "Aaron Rodgers", pos: "QB", team: "PIT" },
-  { rank: 100, prev: 100, name: "Kaytron Allen", pos: "RB", team: "WAS" }
+  { rank: 45, prev: 45, name: "Emeka Egbuka", pos: "WR", team: "TB" },
+  { rank: 46, prev: 46, name: "Courtland Sutton", pos: "WR", team: "DEN" },
+  { rank: 47, prev: 47, name: "Rome Odunze", pos: "WR", team: "CHI" },
+  { rank: 48, prev: 48, name: "Jameson Williams", pos: "WR", team: "DET" },
+  { rank: 49, prev: 49, name: "Chris Olave", pos: "WR", team: "NO" },
+  { rank: 50, prev: 50, name: "DK Metcalf", pos: "WR", team: "PIT" },
+  { rank: 51, prev: 51, name: "Tee Higgins", pos: "WR", team: "CIN" },
+  { rank: 52, prev: 52, name: "Patrick Mahomes", pos: "QB", team: "KC" },
+  { rank: 53, prev: 53, name: "Joe Burrow", pos: "QB", team: "CIN" },
+  { rank: 54, prev: 54, name: "Jalen Hurts", pos: "QB", team: "PHI" },
+  { rank: 55, prev: 55, name: "Sam LaPorta", pos: "TE", team: "DET" },
+  { rank: 56, prev: 56, name: "Deebo Samuel", pos: "WR", team: "SF" },
+  { rank: 57, prev: 57, name: "George Kittle", pos: "TE", team: "SF" },
+  { rank: 58, prev: null, name: "Jeremiyah Love", pos: "RB", team: "ARI" },
+  { rank: 59, prev: 58, name: "Jaylen Warren", pos: "RB", team: "PIT" },
+  { rank: 60, prev: 59, name: "Rico Dowdle", pos: "RB", team: "PIT" },
+  { rank: 61, prev: 60, name: "Alec Pierce", pos: "WR", team: "IND" },
+  { rank: 62, prev: 61, name: "Jalen Nailor", pos: "WR", team: "LV" },
+  { rank: 63, prev: 62, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
+  { rank: 64, prev: 63, name: "Mike Evans", pos: "WR", team: "SF" },
+  { rank: 65, prev: 64, name: "Rashee Rice", pos: "WR", team: "KC" },
+  { rank: 66, prev: 65, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
+  { rank: 67, prev: 66, name: "Mark Andrews", pos: "TE", team: "BAL" },
+  { rank: 68, prev: 67, name: "David Njoku", pos: "TE", team: "CLE" },
+  { rank: 69, prev: 68, name: "Dallas Goedert", pos: "TE", team: "PHI" },
+  { rank: 70, prev: 69, name: "Justin Herbert", pos: "QB", team: "LAC" },
+  { rank: 71, prev: 70, name: "Baker Mayfield", pos: "QB", team: "TB" },
+  { rank: 72, prev: 71, name: "Kyler Murray", pos: "QB", team: "MIN" },
+  { rank: 73, prev: 72, name: "Quinshon Judkins", pos: "RB", team: "CLE" },
+  { rank: 74, prev: 73, name: "Harold Fannin Jr.", pos: "TE", team: "CLE" },
+  { rank: 75, prev: 74, name: "Javonte Williams", pos: "RB", team: "DAL" },
+  { rank: 76, prev: 75, name: "Bhayshul Tuten", pos: "RB", team: "JAX" },
+  { rank: 77, prev: 76, name: "Tank Bigsby", pos: "RB", team: "JAX" },
+  { rank: 78, prev: 77, name: "Tyjae Spears", pos: "RB", team: "TEN" },
+  { rank: 79, prev: 78, name: "Jordan Addison", pos: "WR", team: "MIN" },
+  { rank: 80, prev: 79, name: "Calvin Ridley", pos: "WR", team: "TEN" },
+  { rank: 81, prev: 80, name: "Keenan Allen", pos: "WR", team: "LAC" },
+  { rank: 82, prev: 81, name: "Christian Watson", pos: "WR", team: "GB" },
+  { rank: 83, prev: 82, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
+  { rank: 84, prev: 83, name: "Roman Wilson", pos: "WR", team: "PIT" },
+  { rank: 85, prev: 84, name: "Kaleb Johnson", pos: "RB", team: "PIT" },
+  { rank: 86, prev: 85, name: "J.K. Dobbins", pos: "RB", team: "DEN" },
+  { rank: 87, prev: 86, name: "Bo Nix", pos: "QB", team: "DEN" },
+  { rank: 88, prev: 87, name: "Brock Purdy", pos: "QB", team: "SF" },
+  { rank: 89, prev: 88, name: "Matthew Stafford", pos: "QB", team: "LAR" },
+  { rank: 90, prev: 89, name: "Evan Engram", pos: "TE", team: "DEN" },
+  { rank: 91, prev: 90, name: "Kyle Pitts", pos: "TE", team: "ATL" },
+  { rank: 92, prev: 91, name: "Tucker Kraft", pos: "TE", team: "GB" },
+  { rank: 93, prev: 92, name: "Colston Loveland", pos: "TE", team: "CHI" },
+  { rank: 94, prev: 93, name: "Jonnu Smith", pos: "TE", team: "PIT" },
+  { rank: 95, prev: 94, name: "C.J. Stroud", pos: "QB", team: "HOU" },
+  { rank: 96, prev: 95, name: "Dak Prescott", pos: "QB", team: "DAL" },
+  { rank: 97, prev: 96, name: "Caleb Williams", pos: "QB", team: "CHI" },
+  { rank: 98, prev: 97, name: "Drake Maye", pos: "QB", team: "NE" },
+  { rank: 99, prev: 98, name: "Trevor Lawrence", pos: "QB", team: "JAX" },
+  { rank: 100, prev: 99, name: "Aaron Rodgers", pos: "QB", team: "PIT" }
+
 ];
 
 function renderMove(entry){
@@ -990,8 +1041,7 @@ const VEGAS_RANKINGS = [
   { rank: 19, prevVegas: 19, consensus: 14, name: "Brian Thomas Jr.", pos: "WR", team: "JAX" },
   { rank: 20, prevVegas: 20, consensus: 23, name: "Kyren Williams", pos: "RB", team: "LAR" },
   { rank: 21, prevVegas: 21, consensus: 25, name: "Chase Brown", pos: "RB", team: "CIN" },
-  { rank: 22, prevVegas: 22, consensus: 22, name: "Bucky Irving", pos: "RB", team: "TB" },
-  { rank: 23, prevVegas: 23, consensus: 15, name: "De'Von Achane", pos: "RB", team: "MIA" },
+  { rank: 22, prevVegas: 22, consensus: 22, name: "Bucky Irving", pos: "RB", team: "TB" },  { rank: 23, prevVegas: 23, consensus: 15, name: "De'Von Achane", pos: "RB", team: "MIA" },
   { rank: 24, prevVegas: 24, consensus: 21, name: "Trey McBride", pos: "TE", team: "ARI" },
   { rank: 25, prevVegas: 25, consensus: 27, name: "James Cook", pos: "RB", team: "BUF" },
   { rank: 26, prevVegas: 26, consensus: 24, name: "Brock Bowers", pos: "TE", team: "LV" },
@@ -1017,58 +1067,59 @@ const VEGAS_RANKINGS = [
   { rank: 46, prevVegas: 46, consensus: 44, name: "George Pickens", pos: "WR", team: "DAL" },
   { rank: 47, prevVegas: 47, consensus: 51, name: "Tee Higgins", pos: "WR", team: "CIN" },
   { rank: 48, prevVegas: 48, consensus: 47, name: "Rome Odunze", pos: "WR", team: "CHI" },
-  { rank: 49, prevVegas: null, consensus: 45, name: "Emeka Egbuka", pos: "WR", team: "TB" },
-  { rank: 50, prevVegas: 49, consensus: 52, name: "Patrick Mahomes", pos: "QB", team: "KC" },
-  { rank: 51, prevVegas: 50, consensus: 53, name: "Joe Burrow", pos: "QB", team: "CIN" },
-  { rank: 52, prevVegas: 51, consensus: 50, name: "DK Metcalf", pos: "WR", team: "PIT" },
-  { rank: 53, prevVegas: null, consensus: 63, name: "Mike Evans", pos: "WR", team: "SF" },
-  { rank: 54, prevVegas: 52, consensus: 55, name: "Sam LaPorta", pos: "TE", team: "DET" },
-  { rank: 55, prevVegas: 53, consensus: 49, name: "Chris Olave", pos: "WR", team: "NO" },
-  { rank: 56, prevVegas: 54, consensus: 54, name: "Jalen Hurts", pos: "QB", team: "PHI" },
-  { rank: 57, prevVegas: 55, consensus: 60, name: "Alec Pierce", pos: "WR", team: "IND" },
-  { rank: 58, prevVegas: 56, consensus: 57, name: "George Kittle", pos: "TE", team: "SF" },
-  { rank: 59, prevVegas: 57, consensus: 56, name: "Deebo Samuel", pos: "WR", team: "SF" },
-  { rank: 60, prevVegas: 58, consensus: 58, name: "Jaylen Warren", pos: "RB", team: "PIT" },
-  { rank: 61, prevVegas: 59, consensus: 59, name: "Rico Dowdle", pos: "RB", team: "PIT" },
-  { rank: 62, prevVegas: 60, consensus: 64, name: "Rashee Rice", pos: "WR", team: "KC" },
-  { rank: 63, prevVegas: 61, consensus: 61, name: "Jalen Nailor", pos: "WR", team: "LV" },
-  { rank: 64, prevVegas: 62, consensus: 66, name: "Mark Andrews", pos: "TE", team: "BAL" },
-  { rank: 65, prevVegas: 63, consensus: 68, name: "Dallas Goedert", pos: "TE", team: "PHI" },
-  { rank: 66, prevVegas: 64, consensus: 71, name: "Kyler Murray", pos: "QB", team: "MIN" },
-  { rank: 67, prevVegas: 65, consensus: 69, name: "Justin Herbert", pos: "QB", team: "LAC" },
-  { rank: 68, prevVegas: 66, consensus: 62, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
-  { rank: 69, prevVegas: 67, consensus: 65, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
-  { rank: 70, prevVegas: 68, consensus: 70, name: "Baker Mayfield", pos: "QB", team: "TB" },
-  { rank: 71, prevVegas: 69, consensus: 67, name: "David Njoku", pos: "TE", team: "CLE" },
-  { rank: 72, prevVegas: 70, consensus: 78, name: "Jordan Addison", pos: "WR", team: "MIN" },
-  { rank: 73, prevVegas: 71, consensus: 74, name: "Javonte Williams", pos: "RB", team: "DAL" },
-  { rank: 74, prevVegas: 72, consensus: 72, name: "Quinshon Judkins", pos: "RB", team: "CLE" },
-  { rank: 75, prevVegas: 73, consensus: 80, name: "Keenan Allen", pos: "WR", team: "LAC" },
-  { rank: 76, prevVegas: 74, consensus: 73, name: "Harold Fannin Jr.", pos: "TE", team: "CLE" },
-  { rank: 77, prevVegas: 75, consensus: 75, name: "Bhayshul Tuten", pos: "RB", team: "JAX" },
-  { rank: 78, prevVegas: 76, consensus: 85, name: "J.K. Dobbins", pos: "RB", team: "DEN" },
-  { rank: 79, prevVegas: 77, consensus: 76, name: "Tank Bigsby", pos: "RB", team: "JAX" },
-  { rank: 80, prevVegas: 78, consensus: 77, name: "Tyjae Spears", pos: "RB", team: "TEN" },
-  { rank: 81, prevVegas: 79, consensus: 81, name: "Christian Watson", pos: "WR", team: "GB" },
-  { rank: 82, prevVegas: 80, consensus: 86, name: "Bo Nix", pos: "QB", team: "DEN" },
-  { rank: 83, prevVegas: 81, consensus: 79, name: "Calvin Ridley", pos: "WR", team: "TEN" },
-  { rank: 84, prevVegas: 82, consensus: 82, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
-  { rank: 85, prevVegas: 83, consensus: 83, name: "Roman Wilson", pos: "WR", team: "PIT" },
-  { rank: 86, prevVegas: 84, consensus: 89, name: "Evan Engram", pos: "TE", team: "DEN" },
-  { rank: 87, prevVegas: 85, consensus: 84, name: "Kaleb Johnson", pos: "RB", team: "PIT" },
-  { rank: 88, prevVegas: 86, consensus: 87, name: "Brock Purdy", pos: "QB", team: "SF" },
-  { rank: 89, prevVegas: 87, consensus: 88, name: "Matthew Stafford", pos: "QB", team: "LAR" },
-  { rank: 90, prevVegas: 88, consensus: 90, name: "Kyle Pitts", pos: "TE", team: "ATL" },
-  { rank: 91, prevVegas: 89, consensus: 91, name: "Tucker Kraft", pos: "TE", team: "GB" },
-  { rank: 92, prevVegas: 90, consensus: 92, name: "Colston Loveland", pos: "TE", team: "CHI" },
-  { rank: 93, prevVegas: 91, consensus: 93, name: "Jonnu Smith", pos: "TE", team: "PIT" },
-  { rank: 94, prevVegas: 92, consensus: 94, name: "C.J. Stroud", pos: "QB", team: "HOU" },
-  { rank: 95, prevVegas: 93, consensus: 95, name: "Dak Prescott", pos: "QB", team: "DAL" },
-  { rank: 96, prevVegas: 94, consensus: 96, name: "Caleb Williams", pos: "QB", team: "CHI" },
-  { rank: 97, prevVegas: 95, consensus: 97, name: "Drake Maye", pos: "QB", team: "NE" },
-  { rank: 98, prevVegas: 98, consensus: 98, name: "Trevor Lawrence", pos: "QB", team: "JAX" },
-  { rank: 99, prevVegas: 99, consensus: 101, name: "Chris Godwin", pos: "WR", team: "TB" },
-  { rank: 100, prevVegas: 100, consensus: 100, name: "Kaytron Allen", pos: "RB", team: "WAS" }
+  { rank: 49, prevVegas: 49, consensus: 45, name: "Emeka Egbuka", pos: "WR", team: "TB" },
+  { rank: 50, prevVegas: 50, consensus: 52, name: "Patrick Mahomes", pos: "QB", team: "KC" },
+  { rank: 51, prevVegas: 51, consensus: 53, name: "Joe Burrow", pos: "QB", team: "CIN" },
+  { rank: 52, prevVegas: 52, consensus: 50, name: "DK Metcalf", pos: "WR", team: "PIT" },
+  { rank: 53, prevVegas: 53, consensus: 64, name: "Mike Evans", pos: "WR", team: "SF" },
+  { rank: 54, prevVegas: 54, consensus: 55, name: "Sam LaPorta", pos: "TE", team: "DET" },
+  { rank: 55, prevVegas: 55, consensus: 49, name: "Chris Olave", pos: "WR", team: "NO" },
+  { rank: 56, prevVegas: 56, consensus: 54, name: "Jalen Hurts", pos: "QB", team: "PHI" },
+  { rank: 57, prevVegas: 57, consensus: 61, name: "Alec Pierce", pos: "WR", team: "IND" },
+  { rank: 58, prevVegas: 58, consensus: 57, name: "George Kittle", pos: "TE", team: "SF" },
+  { rank: 59, prevVegas: 59, consensus: 56, name: "Deebo Samuel", pos: "WR", team: "SF" },
+  { rank: 60, prevVegas: null, consensus: 58, name: "Jeremiyah Love", pos: "RB", team: "ARI" },
+  { rank: 61, prevVegas: 60, consensus: 59, name: "Jaylen Warren", pos: "RB", team: "PIT" },
+  { rank: 62, prevVegas: 61, consensus: 60, name: "Rico Dowdle", pos: "RB", team: "PIT" },
+  { rank: 63, prevVegas: 62, consensus: 65, name: "Rashee Rice", pos: "WR", team: "KC" },
+  { rank: 64, prevVegas: 63, consensus: 62, name: "Jalen Nailor", pos: "WR", team: "LV" },
+  { rank: 65, prevVegas: 64, consensus: 67, name: "Mark Andrews", pos: "TE", team: "BAL" },
+  { rank: 66, prevVegas: 65, consensus: 69, name: "Dallas Goedert", pos: "TE", team: "PHI" },
+  { rank: 67, prevVegas: 66, consensus: 72, name: "Kyler Murray", pos: "QB", team: "MIN" },
+  { rank: 68, prevVegas: 67, consensus: 70, name: "Justin Herbert", pos: "QB", team: "LAC" },
+  { rank: 69, prevVegas: 68, consensus: 63, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
+  { rank: 70, prevVegas: 69, consensus: 66, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
+  { rank: 71, prevVegas: 70, consensus: 71, name: "Baker Mayfield", pos: "QB", team: "TB" },
+  { rank: 72, prevVegas: 71, consensus: 68, name: "David Njoku", pos: "TE", team: "CLE" },
+  { rank: 73, prevVegas: 72, consensus: 79, name: "Jordan Addison", pos: "WR", team: "MIN" },
+  { rank: 74, prevVegas: 73, consensus: 75, name: "Javonte Williams", pos: "RB", team: "DAL" },
+  { rank: 75, prevVegas: 74, consensus: 73, name: "Quinshon Judkins", pos: "RB", team: "CLE" },
+  { rank: 76, prevVegas: 75, consensus: 81, name: "Keenan Allen", pos: "WR", team: "LAC" },
+  { rank: 77, prevVegas: 76, consensus: 74, name: "Harold Fannin Jr.", pos: "TE", team: "CLE" },
+  { rank: 78, prevVegas: 77, consensus: 76, name: "Bhayshul Tuten", pos: "RB", team: "JAX" },
+  { rank: 79, prevVegas: 78, consensus: 86, name: "J.K. Dobbins", pos: "RB", team: "DEN" },
+  { rank: 80, prevVegas: 79, consensus: 77, name: "Tank Bigsby", pos: "RB", team: "JAX" },
+  { rank: 81, prevVegas: 80, consensus: 78, name: "Tyjae Spears", pos: "RB", team: "TEN" },
+  { rank: 82, prevVegas: 81, consensus: 82, name: "Christian Watson", pos: "WR", team: "GB" },
+  { rank: 83, prevVegas: 82, consensus: 87, name: "Bo Nix", pos: "QB", team: "DEN" },
+  { rank: 84, prevVegas: 83, consensus: 80, name: "Calvin Ridley", pos: "WR", team: "TEN" },
+  { rank: 85, prevVegas: 84, consensus: 83, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
+  { rank: 86, prevVegas: 85, consensus: 84, name: "Roman Wilson", pos: "WR", team: "PIT" },
+  { rank: 87, prevVegas: 86, consensus: 90, name: "Evan Engram", pos: "TE", team: "DEN" },
+  { rank: 88, prevVegas: 87, consensus: 85, name: "Kaleb Johnson", pos: "RB", team: "PIT" },
+  { rank: 89, prevVegas: 88, consensus: 88, name: "Brock Purdy", pos: "QB", team: "SF" },
+  { rank: 90, prevVegas: 89, consensus: 89, name: "Matthew Stafford", pos: "QB", team: "LAR" },
+  { rank: 91, prevVegas: 90, consensus: 91, name: "Kyle Pitts", pos: "TE", team: "ATL" },
+  { rank: 92, prevVegas: 91, consensus: 92, name: "Tucker Kraft", pos: "TE", team: "GB" },
+  { rank: 93, prevVegas: 92, consensus: 93, name: "Colston Loveland", pos: "TE", team: "CHI" },
+  { rank: 94, prevVegas: 93, consensus: 94, name: "Jonnu Smith", pos: "TE", team: "PIT" },
+  { rank: 95, prevVegas: 94, consensus: 95, name: "C.J. Stroud", pos: "QB", team: "HOU" },
+  { rank: 96, prevVegas: 95, consensus: 96, name: "Dak Prescott", pos: "QB", team: "DAL" },
+  { rank: 97, prevVegas: 96, consensus: 97, name: "Caleb Williams", pos: "QB", team: "CHI" },
+  { rank: 98, prevVegas: 97, consensus: 98, name: "Drake Maye", pos: "QB", team: "NE" },
+  { rank: 99, prevVegas: 98, consensus: 99, name: "Trevor Lawrence", pos: "QB", team: "JAX" },
+  { rank: 100, prevVegas: 99, consensus: 101, name: "Chris Godwin", pos: "WR", team: "TB" }
+
 ];
 
 function renderVegasMove(entry){
@@ -1139,8 +1190,7 @@ const PROP_LINES = [
     market: "Regular Season Rushing TDs",
     line: "O 7.5", odds: "-102",
     note: "Books expect heavy goal-line usage in Houston — strong TD-equity signal for a player who can slide in drafts."
-  },
-  {
+  },  {
     name: "Chase Brown", pos: "RB", team: "CIN",
     market: "Regular Season Rushing Yards",
     line: "O 824.5", odds: "-110",
