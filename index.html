@@ -402,7 +402,7 @@
     <h1>The Wire</h1>
     <p class="sub">Roster moves, coaching changes, and what they mean for your lineup.</p>
     <div class="updated">
-      <span id="updatedStamp">Last update: Aug 24, 2026</span>
+      <span id="updatedStamp">Last update: Aug 27, 2026</span>
       <span class="theme-switch" id="themeSwitch">
         <button class="theme-dot active" data-theme="theme-light" style="background:#c17d1f" title="Desert Light" aria-label="Desert Light theme"></button>
         <button class="theme-dot" data-theme="theme-navy" style="background:#e0932e" title="Gridiron Navy" aria-label="Gridiron Navy theme"></button>
@@ -460,7 +460,8 @@ const FP_SLUG_EXCEPTIONS = {
   "Michael Pittman Jr.": "michael-pittman",
   "Amon-Ra St. Brown": "amonra-stbrown",
   "Jaxon Smith-Njigba": "jaxon-smith-njigba",
-  "JuJu Smith-Schuster": "juju-smith-schuster"
+  "JuJu Smith-Schuster": "juju-smith-schuster",
+  "Calvin Austin III": "calvin-austin"
 };
 
 function fpSlug(name){
@@ -478,6 +479,78 @@ function fpUrl(name){
 }
 
 const ENTRIES = [
+  {
+    date: "2026-08-26",
+    category: "injury",
+    tag: "Injury",
+    headline: "Ja'Marr Chase avoids a scare — mild knee hyperextension, no Week 1 concern",
+    detail: "Chase went down on a non-contact play in Wednesday's practice and watched the rest of it from the sideline, but the Bengals are calling it a mild hyperextension. He told ESPN 1530 'if I had a game tomorrow, I'd play.' Cincinnati will stay cautious through the preseason finale — no reason to move him off the top of the board, but confirm he's a full practice participant before the opener.",
+    players: ["Ja'Marr Chase", "Tee Higgins"]
+  },
+  {
+    date: "2026-08-26",
+    category: "injury",
+    tag: "Injury",
+    headline: "Calvin Austin III tears his ACL — the Giants' No. 3 receiver job opens up",
+    detail: "Austin went down in Tuesday's practice ahead of the Jets finale and is out for the season per an AP source. Darnell Mooney is the most direct beneficiary of the vacated slot and No. 3 snaps, and it also improves 33-year-old Odell Beckham Jr.'s odds of surviving cut-down day in New York.",
+    players: ["Calvin Austin III", "Darnell Mooney", "Malik Nabers"]
+  },
+  {
+    date: "2026-08-26",
+    category: "injury",
+    tag: "Injury",
+    headline: "Malik Nabers cleared for full contact — Week 1 is back on the table",
+    detail: "Nabers is back to full-contact work after the knee that limited him through camp, and the Giants now call his availability for the opener reasonable. Combined with Calvin Austin's ACL, this passing game funnels through him even harder than it did last year — draft him at his price, not at a discount.",
+    players: ["Malik Nabers", "Darnell Mooney"]
+  },
+  {
+    date: "2026-08-26",
+    category: "depth",
+    tag: "Depth Chart",
+    headline: "Cardinals waive Trey Benson — Tyler Allgeier is Arizona's Week 1 starter by default",
+    detail: "Arizona cut Benson on Monday, and coach Mike LaFleur said James Conner's foot 'is starting to creep up' — Conner still hasn't taken an 11-on-11 rep in camp and his opener is in real doubt. With Jeremiyah Love shut down for the rest of the preseason with a high ankle, Allgeier is the only healthy back with a defined role and journeyman Bam Knight is the emergency option behind him. That's a workload bet worth paying up for.",
+    players: ["Tyler Allgeier", "James Conner", "Jeremiyah Love", "Trey Benson"]
+  },
+  {
+    date: "2026-08-26",
+    category: "coaching",
+    tag: "Coaching",
+    headline: "Browns name Deshaun Watson the Week 1 starter over Shedeur Sanders",
+    detail: "Cleveland finally settled the summer's longest quarterback competition, handing Watson the opener against Jacksonville — his first game since October 2024 and a pair of Achilles injuries. It's the outcome that caps this offense's ceiling; Sanders would have added designed-run scoring equity. Treat Jerry Jeudy as a volume-dependent WR3 until Watson shows the arm is back.",
+    players: ["Deshaun Watson", "Jerry Jeudy", "Quinshon Judkins"]
+  },
+  {
+    date: "2026-08-25",
+    category: "coaching",
+    tag: "Coaching",
+    headline: "New Steelers OC Brian Angelichio has gone nearly all-in on 11 personnel",
+    detail: "PFF's preseason scheme review has Pittsburgh at 70.8% 11 personnel, up from 50.9% a year ago, with 12- and 13-personnel snaps cut way back. Three-receiver sets at that rate are a direct target boost for DK Metcalf and Michael Pittman Jr., and they shrink the tight end and second-back roles in the offense.",
+    players: ["DK Metcalf", "Michael Pittman Jr.", "Jaylen Warren"]
+  },
+  {
+    date: "2026-08-25",
+    category: "trade",
+    tag: "Trade",
+    headline: "Kayshon Boutte traded to Houston in exchange for safety Jaylen Reed",
+    detail: "The cut-down-day move telegraphed last week landed: New England sent Boutte to the Texans, who needed a body outside after Jayden Higgins' season-ending ACL. Boutte is a deep-threat specialist (33-551-6 last year, 15.0 yards a catch over two seasons) rather than a target hog — best-ball and deep-league interest only, and it doesn't push Tank Dell out of the primary role.",
+    players: ["Kayshon Boutte", "Tank Dell", "C.J. Stroud"]
+  },
+  {
+    date: "2026-08-25",
+    category: "rookie",
+    tag: "Rookie",
+    headline: "Caleb Douglas opens atop Miami's receiver depth chart as a rookie starter",
+    detail: "The third-round pick has been the story of Dolphins camp and is listed as a starting wideout on Miami's first unofficial depth chart, with veteran Tutu Atwell now a cut candidate behind him. A thin post-Waddle receiver room plus a starting job makes him the cheapest rookie WR bet left on the board.",
+    players: ["Caleb Douglas", "Devon Achane"]
+  },
+  {
+    date: "2026-08-26",
+    category: "oline",
+    tag: "O-Line",
+    headline: "Jacksonville is down to a guard audition in front of Trevor Lawrence",
+    detail: "Patrick Mekari's Aug 17 back surgery is expected to cost him a big chunk of the season, and the Jaguars are still sorting the other guard spot between Emmanuel Pregnon, Walker Little, Daniel Faalele and Wyatt Milum. Liam Coen conceded the group is thin — 'you get thin, start putting more reps on other guys that may not be truly prepared.' The pressure risk shows up first in Brian Thomas Jr.'s deep routes and rookie LeQuint Allen's interior carries.",
+    players: ["Trevor Lawrence", "Brian Thomas Jr."]
+  },
   {
     date: "2026-08-23",
     category: "injury",
@@ -528,14 +601,6 @@ const ENTRIES = [
   },
   {
     date: "2026-08-22",
-    category: "depth",
-    tag: "Depth Chart",
-    headline: "Tyler Allgeier is Arizona's only healthy back — Cardinals list him RB1 ahead of Jeremiyah Love",
-    detail: "Love (high ankle) is unlikely to play again this preseason, James Conner still has no timetable to return to full team work after last year's foot injury, and Trey Benson is down with a knee. Arizona's unofficial depth chart now has Allgeier first and Love second, which turns Allgeier from a handcuff into a real Week 1 workload bet.",
-    players: ["Tyler Allgeier", "Jeremiyah Love", "James Conner", "Trey Benson"]
-  },
-  {
-    date: "2026-08-22",
     category: "rookie",
     tag: "Rookie",
     headline: "Jadarian Price inherits Seattle's backfield with Charbonnet's ACL rehab running long",
@@ -575,30 +640,6 @@ const ENTRIES = [
     players: ["Bryce Young", "Tetairoa McMillan", "Chuba Hubbard"]
   },
   {
-    date: "2026-08-20",
-    category: "trade",
-    tag: "Trade",
-    headline: "Cut-down day is Aug 30 — Kayshon Boutte and Cedric Tillman are the skill players most likely to move",
-    detail: "Boutte is buried behind A.J. Brown and Romeo Doubs in New England while Houston has an obvious receiver need after Jayden Higgins' ACL; Tillman got squeezed out in Cleveland by the KC Concepcion and Denzel Boston draft class. Either one landing somewhere with targets is the kind of late-August move that quietly reshapes the back half of drafts.",
-    players: ["Kayshon Boutte", "Cedric Tillman", "Jerry Jeudy"]
-  },
-  {
-    date: "2026-08-18",
-    category: "injury",
-    tag: "Injury",
-    headline: "Puka Nacua sidelined with a deep core (psoas) issue, expected back before Week 1",
-    detail: "Nacua left practice with tightness in the psoas, the deep muscle linking the lower spine and pelvis to the femur, and the Rams have framed it as short-term with a return to full work expected. No projection change yet, but a core-muscle problem on a top-three overall pick is worth a practice-report check right up to draft day.",
-    players: ["Puka Nacua", "Matthew Stafford"]
-  },
-  {
-    date: "2026-08-18",
-    category: "injury",
-    tag: "Injury",
-    headline: "Alvin Kamara (MCL) out at least a month; Travis Etienne takes over the Saints backfield",
-    detail: "Kamara sprained his MCL in Tuesday's joint practice with Dallas and is expected out roughly a month. Etienne, signed by New Orleans this offseason, steps in as the clear early-down and passing-down back in the interim, enough of a workload signal to move him up the Top 150 Tracker. Devin Neal and Kendre Miller are deep-league dart throws behind him.",
-    players: ["Alvin Kamara", "Travis Etienne Jr."]
-  },
-  {
     date: "2026-08-18",
     category: "depth",
     tag: "Depth Chart",
@@ -615,44 +656,12 @@ const ENTRIES = [
     players: ["Justin Herbert", "Omarion Hampton"]
   },
   {
-    date: "2026-08-17",
-    category: "injury",
-    tag: "Injury",
-    headline: "Todd Bowles won't commit on Emeka Egbuka's Week 1 status after his toe sprain",
-    detail: "A specialist confirmed a sprained toe out of the Jets joint practice and the early read was that Egbuka would be fine for the opener — but Bowles has since said he's 'not sure.' Tampa Bay's WR1-by-default after the Mike Evans trade is now a draft-day risk, with Chris Godwin and Jalen McMillan the fallbacks if he misses time.",
-    players: ["Emeka Egbuka", "Chris Godwin", "Jalen McMillan", "Baker Mayfield"]
-  },
-  {
-    date: "2026-08-17",
-    category: "injury",
-    tag: "Injury",
-    headline: "Jeremiyah Love dealing with a high ankle sprain after his breakout preseason opener",
-    detail: "Arizona's rookie back is considered on track for Week 1, but a high ankle sprain is worth tempering expectations around after last week's 14-touch showing. Treat him as a talented but slightly riskier early-round flier until he's back to full practice reps.",
-    players: ["Jeremiyah Love"]
-  },
-  {
     date: "2026-08-16",
     category: "rookie",
     tag: "Rookie",
     headline: "Ja'Kobi Lane is winning Baltimore's WR3 job and could crowd Rashod Bateman by midseason",
     detail: "The third-round rookie scored in his preseason debut against Philadelphia and has pulled clear of Devontez Walker and Elijah Saratt for the No. 3 role. He's effectively free at a WR69 ADP behind Zay Flowers and Bateman, with a real path to a bigger share of a top-scoring offense once the season settles.",
     players: ["Ja'Kobi Lane", "Rashod Bateman", "Zay Flowers"]
-  },
-  {
-    date: "2026-08-17",
-    category: "coaching",
-    tag: "Coaching",
-    headline: "Browns' QB battle stays unsettled after Watson outplays Sanders in the preseason opener",
-    detail: "Deshaun Watson went 11-of-15 for 126 yards and a strong passer rating in Cleveland's first preseason game; Shedeur Sanders is set to start the next one as the staff continues to alternate reps. Keeps the offensive environment — and Jerry Jeudy's weekly floor — unpredictable until a starter is named.",
-    players: ["Jerry Jeudy"]
-  },
-  {
-    date: "2026-08-16",
-    category: "rookie",
-    tag: "Rookie",
-    headline: "Jeremiyah Love looks like Arizona's lead back after a 14-touch preseason opener",
-    detail: "The first-round rookie (on a $53M guaranteed deal) played 75% of Arizona's snaps across three preseason drives and out-touched Tyler Allgeier by a wide margin, even though OC Nathaniel Hackett hasn't formally named a starter. Enough of a workload signal to move him into the Top 100 Tracker as a flex-worthy RB2.",
-    players: ["Jeremiyah Love", "Tyler Allgeier"]
   },
   {
     date: "2026-08-16",
@@ -781,14 +790,6 @@ const ENTRIES = [
     headline: "Carnell Tate projected as Titans' Week 1 WR1",
     detail: "Early camp reports have Tate earning roughly 23% of the team's targets, ahead of Calvin Ridley and Wan'Dale Robinson — best rookie bet for immediate fantasy impact.",
     players: ["Carnell Tate", "Calvin Ridley"]
-  },
-  {
-    date: "2026-08-10",
-    category: "oline",
-    tag: "O-Line",
-    headline: "Denver's offensive line graded #1 overall — continuity pays off",
-    detail: "Same five starters for a third straight year; allowed just 5 sacks on 717 pass-block snaps last season. Good for Waddle, the Dobbins/Harvey backfield, and Bo Nix.",
-    players: ["Jaylen Waddle", "J.K. Dobbins", "RJ Harvey"]
   },
   {
     date: "2026-08-10",
@@ -936,19 +937,19 @@ const RANKINGS = [
   { rank: 57, prev: 57, name: "George Kittle", pos: "TE", team: "SF" },
   { rank: 58, prev: 58, name: "Jaylen Warren", pos: "RB", team: "PIT" },
   { rank: 59, prev: 59, name: "Travis Etienne Jr.", pos: "RB", team: "NO" },
-  { rank: 60, prev: 60, name: "Rico Dowdle", pos: "RB", team: "PIT" },
-  { rank: 61, prev: 61, name: "Alec Pierce", pos: "WR", team: "IND" },
-  { rank: 62, prev: 62, name: "Jalen Nailor", pos: "WR", team: "LV" },
-  { rank: 63, prev: 63, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
-  { rank: 64, prev: 64, name: "Mike Evans", pos: "WR", team: "SF" },
-  { rank: 65, prev: 65, name: "Jeremiyah Love", pos: "RB", team: "ARI" },
-  { rank: 66, prev: 66, name: "Rashee Rice", pos: "WR", team: "KC" },
-  { rank: 67, prev: 67, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
-  { rank: 68, prev: 68, name: "Mark Andrews", pos: "TE", team: "BAL" },
-  { rank: 69, prev: 69, name: "David Njoku", pos: "TE", team: "CLE" },
-  { rank: 70, prev: 70, name: "Dallas Goedert", pos: "TE", team: "PHI" },
-  { rank: 71, prev: 71, name: "Justin Herbert", pos: "QB", team: "LAC" },
-  { rank: 72, prev: 72, name: "Tyler Allgeier", pos: "RB", team: "ARI" },
+  { rank: 60, prev: 72, name: "Tyler Allgeier", pos: "RB", team: "ARI" },
+  { rank: 61, prev: 60, name: "Rico Dowdle", pos: "RB", team: "PIT" },
+  { rank: 62, prev: 61, name: "Alec Pierce", pos: "WR", team: "IND" },
+  { rank: 63, prev: 62, name: "Jalen Nailor", pos: "WR", team: "LV" },
+  { rank: 64, prev: 63, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
+  { rank: 65, prev: 64, name: "Mike Evans", pos: "WR", team: "SF" },
+  { rank: 66, prev: 65, name: "Jeremiyah Love", pos: "RB", team: "ARI" },
+  { rank: 67, prev: 66, name: "Rashee Rice", pos: "WR", team: "KC" },
+  { rank: 68, prev: 67, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
+  { rank: 69, prev: 68, name: "Mark Andrews", pos: "TE", team: "BAL" },
+  { rank: 70, prev: 69, name: "David Njoku", pos: "TE", team: "CLE" },
+  { rank: 71, prev: 70, name: "Dallas Goedert", pos: "TE", team: "PHI" },
+  { rank: 72, prev: 71, name: "Justin Herbert", pos: "QB", team: "LAC" },
   { rank: 73, prev: 73, name: "Baker Mayfield", pos: "QB", team: "TB" },
   { rank: 74, prev: 74, name: "Kyler Murray", pos: "QB", team: "MIN" },
   { rank: 75, prev: 75, name: "Quinshon Judkins", pos: "RB", team: "CLE" },
@@ -1122,26 +1123,26 @@ const VEGAS_RANKINGS = [
   { rank: 50, prevVegas: 50, consensus: 52, name: "Patrick Mahomes", pos: "QB", team: "KC" },
   { rank: 51, prevVegas: 51, consensus: 53, name: "Joe Burrow", pos: "QB", team: "CIN" },
   { rank: 52, prevVegas: 52, consensus: 50, name: "DK Metcalf", pos: "WR", team: "PIT" },
-  { rank: 53, prevVegas: 53, consensus: 64, name: "Mike Evans", pos: "WR", team: "SF" },
+  { rank: 53, prevVegas: 53, consensus: 65, name: "Mike Evans", pos: "WR", team: "SF" },
   { rank: 54, prevVegas: 54, consensus: 55, name: "Sam LaPorta", pos: "TE", team: "DET" },
   { rank: 55, prevVegas: 55, consensus: 49, name: "Chris Olave", pos: "WR", team: "NO" },
   { rank: 56, prevVegas: 56, consensus: 54, name: "Jalen Hurts", pos: "QB", team: "PHI" },
-  { rank: 57, prevVegas: 57, consensus: 61, name: "Alec Pierce", pos: "WR", team: "IND" },
+  { rank: 57, prevVegas: 57, consensus: 62, name: "Alec Pierce", pos: "WR", team: "IND" },
   { rank: 58, prevVegas: 58, consensus: 57, name: "George Kittle", pos: "TE", team: "SF" },
   { rank: 59, prevVegas: 59, consensus: 56, name: "Deebo Samuel", pos: "WR", team: "SF" },
-  { rank: 60, prevVegas: 60, consensus: 65, name: "Jeremiyah Love", pos: "RB", team: "ARI" },
+  { rank: 60, prevVegas: 60, consensus: 66, name: "Jeremiyah Love", pos: "RB", team: "ARI" },
   { rank: 61, prevVegas: 61, consensus: 58, name: "Jaylen Warren", pos: "RB", team: "PIT" },
-  { rank: 62, prevVegas: 62, consensus: 60, name: "Rico Dowdle", pos: "RB", team: "PIT" },
-  { rank: 63, prevVegas: 63, consensus: 66, name: "Rashee Rice", pos: "WR", team: "KC" },
-  { rank: 64, prevVegas: 64, consensus: 62, name: "Jalen Nailor", pos: "WR", team: "LV" },
-  { rank: 65, prevVegas: 65, consensus: 68, name: "Mark Andrews", pos: "TE", team: "BAL" },
-  { rank: 66, prevVegas: 66, consensus: 70, name: "Dallas Goedert", pos: "TE", team: "PHI" },
+  { rank: 62, prevVegas: 62, consensus: 61, name: "Rico Dowdle", pos: "RB", team: "PIT" },
+  { rank: 63, prevVegas: 63, consensus: 67, name: "Rashee Rice", pos: "WR", team: "KC" },
+  { rank: 64, prevVegas: 64, consensus: 63, name: "Jalen Nailor", pos: "WR", team: "LV" },
+  { rank: 65, prevVegas: 65, consensus: 69, name: "Mark Andrews", pos: "TE", team: "BAL" },
+  { rank: 66, prevVegas: 66, consensus: 71, name: "Dallas Goedert", pos: "TE", team: "PHI" },
   { rank: 67, prevVegas: 67, consensus: 74, name: "Kyler Murray", pos: "QB", team: "MIN" },
-  { rank: 68, prevVegas: 68, consensus: 71, name: "Justin Herbert", pos: "QB", team: "LAC" },
-  { rank: 69, prevVegas: 69, consensus: 63, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
-  { rank: 70, prevVegas: 70, consensus: 67, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
+  { rank: 68, prevVegas: 68, consensus: 72, name: "Justin Herbert", pos: "QB", team: "LAC" },
+  { rank: 69, prevVegas: 69, consensus: 64, name: "Jerry Jeudy", pos: "WR", team: "CLE" },
+  { rank: 70, prevVegas: 70, consensus: 68, name: "Garrett Wilson", pos: "WR", team: "NYJ" },
   { rank: 71, prevVegas: 71, consensus: 73, name: "Baker Mayfield", pos: "QB", team: "TB" },
-  { rank: 72, prevVegas: 72, consensus: 69, name: "David Njoku", pos: "TE", team: "CLE" },
+  { rank: 72, prevVegas: 72, consensus: 70, name: "David Njoku", pos: "TE", team: "CLE" },
   { rank: 73, prevVegas: 73, consensus: 81, name: "Jordan Addison", pos: "WR", team: "MIN" },
   { rank: 74, prevVegas: 74, consensus: 77, name: "Javonte Williams", pos: "RB", team: "DAL" },
   { rank: 75, prevVegas: 75, consensus: 75, name: "Quinshon Judkins", pos: "RB", team: "CLE" },
@@ -1172,7 +1173,7 @@ const VEGAS_RANKINGS = [
   { rank: 100, prevVegas: 100, consensus: 103, name: "Chris Godwin", pos: "WR", team: "TB" },
   { rank: 101, prevVegas: 101, consensus: 59, name: "Travis Etienne Jr.", pos: "RB", team: "NO" },
   { rank: 102, prevVegas: 102, consensus: 104, name: "Rachaad White", pos: "RB", team: "TB" },
-  { rank: 103, prevVegas: 103, consensus: 72, name: "Tyler Allgeier", pos: "RB", team: "ARI" },
+  { rank: 103, prevVegas: 103, consensus: 60, name: "Tyler Allgeier", pos: "RB", team: "ARI" },
   { rank: 104, prevVegas: 104, consensus: 105, name: "Zach Charbonnet", pos: "RB", team: "SEA" },
   { rank: 105, prevVegas: 105, consensus: 106, name: "Chuba Hubbard", pos: "RB", team: "CAR" },
   { rank: 106, prevVegas: 106, consensus: 107, name: "Jonathon Brooks", pos: "RB", team: "CAR" },
