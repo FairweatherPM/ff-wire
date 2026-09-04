@@ -402,7 +402,7 @@
     <h1>The Wire</h1>
     <p class="sub">Roster moves, coaching changes, and what they mean for your lineup.</p>
     <div class="updated">
-      <span id="updatedStamp">Last update: Sep 2, 2026</span>
+      <span id="updatedStamp">Last update: Sep 4, 2026</span>
       <span class="theme-switch" id="themeSwitch">
         <button class="theme-dot active" data-theme="theme-light" style="background:#c17d1f" title="Desert Light" aria-label="Desert Light theme"></button>
         <button class="theme-dot" data-theme="theme-navy" style="background:#e0932e" title="Gridiron Navy" aria-label="Gridiron Navy theme"></button>
@@ -480,6 +480,54 @@ function fpUrl(name){
 
 const ENTRIES = [
   {
+    date: "2026-09-02",
+    category: "coaching",
+    tag: "Coaching",
+    headline: "Falcons still haven't named a Week 1 starter, but the plan is Penix 'eventually'",
+    detail: "NFL Network's Cameron Wolfe reports Atlanta's plan is for Michael Penix Jr. to take over at some point once he's fully cleared from his ACL rehab, with Tua Tagovailoa — who signed on after being released by Miami — handling things in the meantime. Ian Rapoport reported in late August that the job is 'Penix's to lose' once healthy after a shaky Tagovailoa preseason. Treat Bijan Robinson as the safe bet in this offense regardless of who's throwing him the ball, and keep expectations tempered on Drake London and Kyle Pitts until the QB situation firms up.",
+    players: ["Michael Penix Jr.", "Tua Tagovailoa", "Bijan Robinson", "Drake London"]
+  },
+  {
+    date: "2026-09-01",
+    category: "depth",
+    tag: "Depth Chart",
+    headline: "Packers RB Josh Jacobs placed on the commissioner's exempt list — Green Bay's backfield opens up",
+    detail: "The NFL placed Jacobs on the exempt list Aug. 30 pending a legal matter with a November court date; he can't practice or play while on it, and exempt-list absences have historically run anywhere from 5 to 15 games. MarShawn Lloyd has handled a workhorse role with the starters in the preseason and is the clear early-season starter, with newly acquired Kaleb Johnson (see Trades) as the direct insurance behind him.",
+    players: ["Josh Jacobs", "MarShawn Lloyd", "Kaleb Johnson"]
+  },
+  {
+    date: "2026-09-01",
+    category: "injury",
+    tag: "Injury",
+    headline: "Lions place Isiah Pacheco on IR — Jahmyr Gibbs' workload goes up even further",
+    detail: "Detroit put Pacheco on injured reserve Monday, ruling him out a minimum of four games. He was already buried on the depth chart behind Gibbs after Cade Mays' preseason wrist injury unsettled the interior line, so the practical loss is mostly insurance value — but it removes any what-if in Detroit's backfield and locks in a true bell-cow week-to-week workload for Gibbs.",
+    players: ["Isiah Pacheco", "Jahmyr Gibbs"]
+  },
+  {
+    date: "2026-09-01",
+    category: "injury",
+    tag: "Injury",
+    headline: "Tank Dell starts the season on IR — Texans' new-look receiver room absorbs the snaps",
+    detail: "Dell was placed on injured reserve as he continues working back from last year's Week 16 knee injury; the team is calling him 'close' but not ready for the opener. Nico Collins stays the clear WR1, with Kayshon Boutte and Xavier Hutchinson (see Depth Chart) the direct beneficiaries of the vacated target share until Dell is activated.",
+    players: ["Tank Dell", "Nico Collins", "Kayshon Boutte"]
+  },
+  {
+    date: "2026-09-01",
+    category: "injury",
+    tag: "Injury",
+    headline: "Bengals bring Chase and Higgins along cautiously, but both are expected back by the opener",
+    detail: "Chase (hyperextended knee) and Higgins (heel contusion) were both limited in practice this week rather than full workloads, and Zac Taylor has said he expects both to be ready by week's end. Neither is a real fade at their current price — this is standard preseason-into-Week-1 caution for two locks at the top of the WR board, not a workload concern.",
+    players: ["Ja'Marr Chase", "Tee Higgins"]
+  },
+  {
+    date: "2026-08-31",
+    category: "trade",
+    tag: "Trade",
+    headline: "Steelers send RB Kaleb Johnson to Green Bay",
+    detail: "Pittsburgh traded the third-round 2025 pick to the Packers over the weekend, a depth move that instantly became more relevant once Josh Jacobs landed on the commissioner's exempt list two days later (see Depth Chart). Johnson is now the clear handcuff behind presumptive starter MarShawn Lloyd in a backfield that lacks proven depth beyond those two.",
+    players: ["Kaleb Johnson", "MarShawn Lloyd", "Josh Jacobs"]
+  },
+  {
     date: "2026-08-30",
     category: "depth",
     tag: "Depth Chart",
@@ -496,11 +544,11 @@ const ENTRIES = [
     players: ["Kyler Murray", "James Conner", "Isaiah Adams"]
   },
   {
-    date: "2026-08-28",
+    date: "2026-09-01",
     category: "injury",
     tag: "Injury",
-    headline: "Ashton Jeanty's ankle sprain is 'low-grade,' but his ADP keeps sliding",
-    detail: "Reports call the Week 1 sprain low-grade rather than serious, but Las Vegas still hasn't set a firm return timetable and Jeanty's average draft position has fallen to around pick 18 as a result. Mike Washington Jr. remains the direct backup if he sits any practice time into the opener — worth a small discount at the current price, not a fade.",
+    headline: "Raiders GM signals Ashton Jeanty's ankle could heal faster than first expected",
+    detail: "Las Vegas' front office said this week the sprain is trending better than the original 'low-grade but no timetable' read from late August, raising hope he's full-go for the opener. Jeanty's ADP had slid to around pick 18 on the earlier uncertainty — this is the first genuinely positive update since the injury and a buy signal if he's still available at that discount. Mike Washington Jr. remains the direct backup if he's held out of any practice time.",
     players: ["Ashton Jeanty", "Mike Washington Jr."]
   },
   {
@@ -543,30 +591,7 @@ const ENTRIES = [
     detail: "The fourth-round 2025 pick has flashed in back-to-back preseason games (long gains of 35 and 13 yards) and is building chemistry with Cameron Ward. He trails Tyler Lockett in target priority for now, but the depth-chart nod plus real preseason production make him a sneaky bet to complement Calvin Ridley as the season goes on.",
     players: ["Elic Ayomanor", "Calvin Ridley", "Cameron Ward"]
   },
-  {
-    date: "2026-08-26",
-    category: "injury",
-    tag: "Injury",
-    headline: "Ja'Marr Chase avoids a scare — mild knee hyperextension, no Week 1 concern",
-    detail: "Chase went down on a non-contact play in Wednesday's practice and watched the rest of it from the sideline, but the Bengals are calling it a mild hyperextension. He told ESPN 1530 'if I had a game tomorrow, I'd play.' Cincinnati will stay cautious through the preseason finale — no reason to move him off the top of the board, but confirm he's a full practice participant before the opener.",
-    players: ["Ja'Marr Chase", "Tee Higgins"]
-  },
-  {
-    date: "2026-08-26",
-    category: "injury",
-    tag: "Injury",
-    headline: "Calvin Austin III tears his ACL — the Giants' No. 3 receiver job opens up",
-    detail: "Austin went down in Tuesday's practice ahead of the Jets finale and is out for the season per an AP source. Darnell Mooney is the most direct beneficiary of the vacated slot and No. 3 snaps, and it also improves 33-year-old Odell Beckham Jr.'s odds of surviving cut-down day in New York.",
-    players: ["Calvin Austin III", "Darnell Mooney", "Malik Nabers"]
-  },
-  {
-    date: "2026-08-26",
-    category: "injury",
-    tag: "Injury",
-    headline: "Malik Nabers cleared for full contact — Week 1 is back on the table",
-    detail: "Nabers is back to full-contact work after the knee that limited him through camp, and the Giants now call his availability for the opener reasonable. Combined with Calvin Austin's ACL, this passing game funnels through him even harder than it did last year — draft him at his price, not at a discount.",
-    players: ["Malik Nabers", "Darnell Mooney"]
-  },
+
   {
     date: "2026-08-26",
     category: "depth",
@@ -648,14 +673,6 @@ const ENTRIES = [
     players: ["Danny Pinter", "Jovaughn Gwyn", "Ethan Pocic"]
   },
   {
-    date: "2026-08-23",
-    category: "trade",
-    tag: "Trade",
-    headline: "J.J. McCarthy trade buzz resurfaces as Vikings commit to Kyler Murray",
-    detail: "Minnesota named Murray its Week 1 starter and has little incentive to move McCarthy now — the read is they hold him as a QB2 chip and wait for a desperate team (Pittsburgh if Rodgers retires, Tampa Bay after stalled Baker Mayfield extension talks) to overpay in-season. Only matters for streaming/backup value if a deal actually lands.",
-    players: ["J.J. McCarthy", "Kyler Murray"]
-  },
-  {
     date: "2026-08-22",
     category: "rookie",
     tag: "Rookie",
@@ -694,14 +711,6 @@ const ENTRIES = [
     headline: "Tyjae Spears out-snapping Tony Pollard in Tennessee's new offense",
     detail: "Under new OC Brian Daboll, Spears saw more preseason work than Pollard, hinting at a closer 50/50 committee rather than last year's 70/30 split toward Pollard. Worth tightening Spears' draft price a bit.",
     players: ["Tyjae Spears", "Tony Pollard"]
-  },
-  {
-    date: "2026-08-16",
-    category: "depth",
-    tag: "Depth Chart",
-    headline: "Matthew Golden taking starter reps over Jayden Reed in Green Bay's 12-personnel",
-    detail: "Golden played every 12-personnel snap with the starters in the preseason opener, while Reed was limited to slot work in 11-personnel — a sign Golden has the higher-value role for now.",
-    players: ["Matthew Golden", "Jayden Reed"]
   },
   {
     date: "2026-08-16",
@@ -766,14 +775,6 @@ const ENTRIES = [
     headline: "D.J. Moore heads to Buffalo, target competition looms",
     detail: "Traded from Carolina to Buffalo. Slots into Joe Brady's offense but will compete with Khalil Shakir and Keon Coleman for looks.",
     players: ["DJ Moore", "Khalil Shakir", "Keon Coleman"]
-  },
-  {
-    date: "2026-08-10",
-    category: "coaching",
-    tag: "Coaching",
-    headline: "Mike McCarthy's pass-heavy history is good news in Pittsburgh",
-    detail: "New Steelers HC has historically leaned pass-heavy even with strong run games — bullish for Aaron Rodgers' volume and his receivers.",
-    players: ["Aaron Rodgers", "DK Metcalf", "Roman Wilson"]
   },
   {
     date: "2026-08-10",
@@ -895,7 +896,7 @@ const RANKINGS = [
   { rank: 14, prev: 14, name: "Brian Thomas Jr.", pos: "WR", team: "JAX" },
   { rank: 15, prev: 15, name: "De'Von Achane", pos: "RB", team: "MIA" },
   { rank: 16, prev: 16, name: "Derrick Henry", pos: "RB", team: "BAL" },
-  { rank: 17, prev: 17, name: "Josh Jacobs", pos: "RB", team: "GB" },  { rank: 18, prev: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
+  { rank: 17, prev: null, name: "MarShawn Lloyd", pos: "RB", team: "GB" },  { rank: 18, prev: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
   { rank: 19, prev: 19, name: "Drake London", pos: "WR", team: "ATL" },
   { rank: 20, prev: 20, name: "A.J. Brown", pos: "WR", team: "NE" },
   { rank: 21, prev: 21, name: "Trey McBride", pos: "TE", team: "ARI" },
@@ -964,7 +965,7 @@ const RANKINGS = [
   { rank: 84, prev: 84, name: "Christian Watson", pos: "WR", team: "GB" },
   { rank: 85, prev: 85, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
   { rank: 86, prev: 86, name: "Roman Wilson", pos: "WR", team: "PIT" },
-  { rank: 87, prev: 87, name: "Kaleb Johnson", pos: "RB", team: "PIT" },
+  { rank: 87, prev: 17, name: "Josh Jacobs", pos: "RB", team: "GB" },
   { rank: 88, prev: 88, name: "J.K. Dobbins", pos: "RB", team: "DEN" },
   { rank: 89, prev: 89, name: "Bo Nix", pos: "QB", team: "DEN" },
   { rank: 90, prev: 90, name: "Brock Purdy", pos: "QB", team: "SF" },
@@ -1002,7 +1003,7 @@ const RANKINGS = [
   { rank: 122, prev: 122, name: "Luther Burden III", pos: "WR", team: "CHI" },
   { rank: 123, prev: 123, name: "Marquise Brown", pos: "WR", team: "KC" },
   { rank: 124, prev: 124, name: "Jerome Ford", pos: "RB", team: "CLE" },
-  { rank: 125, prev: 125, name: "Isiah Pacheco", pos: "RB", team: "DET" },
+  { rank: 125, prev: 87, name: "Kaleb Johnson", pos: "RB", team: "GB" },
   { rank: 126, prev: 126, name: "Zamir White", pos: "RB", team: "LV" },
   { rank: 127, prev: 127, name: "Jaylen Wright", pos: "RB", team: "MIA" },
   { rank: 128, prev: 128, name: "Braelon Allen", pos: "RB", team: "NYJ" },
@@ -1087,7 +1088,7 @@ const VEGAS_RANKINGS = [
   { rank: 13, prevVegas: 13, consensus: 16, name: "Derrick Henry", pos: "RB", team: "BAL" },
   { rank: 14, prevVegas: 14, consensus: 13, name: "CeeDee Lamb", pos: "WR", team: "DAL" },
   { rank: 15, prevVegas: 15, consensus: 19, name: "Drake London", pos: "WR", team: "ATL" },
-  { rank: 16, prevVegas: 16, consensus: 17, name: "Josh Jacobs", pos: "RB", team: "GB" },
+  { rank: 16, prevVegas: null, consensus: 17, name: "MarShawn Lloyd", pos: "RB", team: "GB" },
   { rank: 17, prevVegas: 17, consensus: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
   { rank: 18, prevVegas: 18, consensus: 20, name: "A.J. Brown", pos: "WR", team: "NE" },
   { rank: 19, prevVegas: 19, consensus: 14, name: "Brian Thomas Jr.", pos: "WR", team: "JAX" },
@@ -1158,7 +1159,7 @@ const VEGAS_RANKINGS = [
   { rank: 85, prevVegas: 85, consensus: 85, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
   { rank: 86, prevVegas: 86, consensus: 86, name: "Roman Wilson", pos: "WR", team: "PIT" },
   { rank: 87, prevVegas: 87, consensus: 92, name: "Evan Engram", pos: "TE", team: "DEN" },
-  { rank: 88, prevVegas: 88, consensus: 87, name: "Kaleb Johnson", pos: "RB", team: "PIT" },
+  { rank: 88, prevVegas: 16, consensus: 87, name: "Josh Jacobs", pos: "RB", team: "GB" },
   { rank: 89, prevVegas: 89, consensus: 90, name: "Brock Purdy", pos: "QB", team: "SF" },
   { rank: 90, prevVegas: 90, consensus: 91, name: "Matthew Stafford", pos: "QB", team: "LAR" },
   { rank: 91, prevVegas: 91, consensus: 93, name: "Kyle Pitts", pos: "TE", team: "ATL" },
@@ -1194,7 +1195,7 @@ const VEGAS_RANKINGS = [
   { rank: 121, prevVegas: 121, consensus: 122, name: "Luther Burden III", pos: "WR", team: "CHI" },
   { rank: 122, prevVegas: 122, consensus: 123, name: "Marquise Brown", pos: "WR", team: "KC" },
   { rank: 123, prevVegas: 123, consensus: 124, name: "Jerome Ford", pos: "RB", team: "CLE" },
-  { rank: 124, prevVegas: 124, consensus: 125, name: "Isiah Pacheco", pos: "RB", team: "DET" },
+  { rank: 124, prevVegas: 88, consensus: 125, name: "Kaleb Johnson", pos: "RB", team: "GB" },
   { rank: 125, prevVegas: 125, consensus: 126, name: "Zamir White", pos: "RB", team: "LV" },
   { rank: 126, prevVegas: 126, consensus: 127, name: "Jaylen Wright", pos: "RB", team: "MIA" },
   { rank: 127, prevVegas: 127, consensus: 128, name: "Braelon Allen", pos: "RB", team: "NYJ" },
