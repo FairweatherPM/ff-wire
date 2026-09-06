@@ -402,7 +402,7 @@
     <h1>The Wire</h1>
     <p class="sub">Roster moves, coaching changes, and what they mean for your lineup.</p>
     <div class="updated">
-      <span id="updatedStamp">Last update: Sep 4, 2026</span>
+      <span id="updatedStamp">Last update: Sep 6, 2026</span>
       <span class="theme-switch" id="themeSwitch">
         <button class="theme-dot active" data-theme="theme-light" style="background:#c17d1f" title="Desert Light" aria-label="Desert Light theme"></button>
         <button class="theme-dot" data-theme="theme-navy" style="background:#e0932e" title="Gridiron Navy" aria-label="Gridiron Navy theme"></button>
@@ -439,7 +439,7 @@
   </div>
 
   <div class="view" id="viewProps">
-    <p class="detail" style="margin-bottom:14px;">Top 10 season-long player prop lines most relevant to fantasy drafting/roster construction right now — yardage and touchdown totals, plus league-leader markets. Sourced from sportsbook prop boards during preseason; lines will shift as camp battles and Week 1 news settle in.</p>
+    <p class="detail" style="margin-bottom:14px;">Top 10 season-long player prop lines most relevant to fantasy drafting/roster construction right now — yardage and touchdown totals, plus league-leader markets. Sourced from sportsbook prop boards as the 2026 season kicks off this week; lines will keep moving with Week 1 injury reports.</p>
     <div id="propTable"></div>
   </div>
 
@@ -461,7 +461,8 @@ const FP_SLUG_EXCEPTIONS = {
   "Amon-Ra St. Brown": "amonra-stbrown",
   "Jaxon Smith-Njigba": "jaxon-smith-njigba",
   "JuJu Smith-Schuster": "juju-smith-schuster",
-  "Calvin Austin III": "calvin-austin"
+  "Calvin Austin III": "calvin-austin",
+  "KC Concepcion": "kevin-concepcion"
 };
 
 function fpSlug(name){
@@ -480,11 +481,51 @@ function fpUrl(name){
 
 const ENTRIES = [
   {
-    date: "2026-09-02",
+    date: "2026-09-06",
+    category: "injury",
+    tag: "Injury",
+    headline: "Christian McCaffrey is fully healthy and traveling to Melbourne for Week 1",
+    detail: "McCaffrey is back to full practice participation after the 49ers managed his workload with 'tightness' for most of August, and Kyle Shanahan has called the absence planned load management rather than a real injury concern. He's making the trip to Australia and is expected to play a full workload against the Rams in the season opener. Treat him as a clear RB1 at his ADP — the health scare that worried fantasy managers all preseason appears to be over.",
+    players: ["Christian McCaffrey"]
+  },
+  {
+    date: "2026-09-05",
+    category: "oline",
+    tag: "O-Line",
+    headline: "Chiefs LT Josh Simmons still hasn't practiced — Mahomes' blindside protection in real doubt for Week 1",
+    detail: "Simmons has been out since mid-August with a back issue Andy Reid says 'flared up,' and he sat out both practices again this week with no clear timetable. Veteran Jaylon Moore is next in line at left tackle if Simmons can't go, with rookie Khalil Benson also in the mix — a real protection downgrade for Patrick Mahomes (working back from his own knee injury) against a Denver defense that finished among the league's best a year ago.",
+    players: ["Patrick Mahomes", "Josh Simmons"]
+  },
+  {
+    date: "2026-09-05",
+    category: "rookie",
+    tag: "Rookie",
+    headline: "Browns roll with two rookies as starting receivers — Denzel Boston and KC Concepcion both in Week 1",
+    detail: "Cleveland's unofficial depth chart lists second-round pick Denzel Boston outside opposite Jerry Jeudy and first-rounder KC Concepcion in the slot, with HC Todd Monken saying the plan 'isn't final' but that both have earned real snaps. Boston's size (6-foot-4) makes him a red-zone/contested-catch threat while Concepcion projects as the more YAC-reliant option — both are deep-league dart throws given the Browns' unresolved QB situation, but the volume path is real if Deshaun Watson's arm holds up.",
+    players: ["Denzel Boston", "KC Concepcion", "Jerry Jeudy"]
+  },
+  {
+    date: "2026-09-03",
+    category: "injury",
+    tag: "Injury",
+    headline: "Mike Evans and George Kittle both trending toward Week 1 in San Francisco's Australia opener",
+    detail: "Evans (groin) returned to practice and is expected to play in the opener against the Rams in Melbourne, while Kittle (Achilles) is making the trip and drawing optimism about his workload after tracking ahead of schedule all preseason. Neither is a lock to be full-go on the injury report, but both look like buys rather than fades at their current prices heading into Week 1.",
+    players: ["Mike Evans", "George Kittle", "Christian McCaffrey"]
+  },
+  {
+    date: "2026-09-03",
+    category: "injury",
+    tag: "Injury",
+    headline: "Kyle Monangai still week-to-week with a hyperextended knee, clouding Chicago's Week 1 backfield",
+    detail: "Bears coach Ben Johnson reaffirmed this week that Monangai remains week-to-week from the Aug. 16 injury, and while he avoided the reserve/PUP list on cutdown day, he still wasn't practicing as of this week. D'Andre Swift is the direct beneficiary of any missed time, with Roschon Johnson and practice-squad back Salvon Ahmed next in line for complementary work.",
+    players: ["Kyle Monangai", "D'Andre Swift", "Roschon Johnson"]
+  },
+  {
+    date: "2026-09-06",
     category: "coaching",
     tag: "Coaching",
-    headline: "Falcons still haven't named a Week 1 starter, but the plan is Penix 'eventually'",
-    detail: "NFL Network's Cameron Wolfe reports Atlanta's plan is for Michael Penix Jr. to take over at some point once he's fully cleared from his ACL rehab, with Tua Tagovailoa — who signed on after being released by Miami — handling things in the meantime. Ian Rapoport reported in late August that the job is 'Penix's to lose' once healthy after a shaky Tagovailoa preseason. Treat Bijan Robinson as the safe bet in this offense regardless of who's throwing him the ball, and keep expectations tempered on Drake London and Kyle Pitts until the QB situation firms up.",
+    headline: "Falcons still won't name a Week 1 QB, but ESPN insider says Penix has already won the job",
+    detail: "GM Ian Cunningham said this week the decision will be a group effort among himself, Kevin Stefanski, Matt Ryan and owner Arthur Blank, with no timeline attached. But ESPN's Mark Zinno reported he believes Stefanski has already settled on Michael Penix Jr. as the Week 1 starter over Tua Tagovailoa — even though Penix didn't play in the preseason finale — while Tagovailoa was reportedly playing that game just to secure a roster spot. Treat Bijan Robinson as the safe bet in this offense regardless of who's throwing him the ball, and keep expectations tempered on Drake London and Kyle Pitts until the QB situation is made official.",
     players: ["Michael Penix Jr.", "Tua Tagovailoa", "Bijan Robinson", "Drake London"]
   },
   {
@@ -536,36 +577,12 @@ const ENTRIES = [
     players: ["Kayshon Boutte", "Nico Collins", "Xavier Hutchinson"]
   },
   {
-    date: "2026-08-15",
-    category: "oline",
-    tag: "O-Line",
-    headline: "Cardinals lose second-round guard Chase Bisontis for the year — Isaiah Adams keeps his job",
-    detail: "Bisontis tore his MCL in the preseason opener against Las Vegas and needs surgery, ending a rookie season in which he was reportedly closing in on the starting right guard job. Isaiah Adams stays put at right guard in front of Kyler Murray and James Conner as a result — a non-move for Arizona's Week 1 line, but it removes the upgrade path some expected by midseason.",
-    players: ["Kyler Murray", "James Conner", "Isaiah Adams"]
-  },
-  {
     date: "2026-09-01",
     category: "injury",
     tag: "Injury",
     headline: "Raiders GM signals Ashton Jeanty's ankle could heal faster than first expected",
     detail: "Las Vegas' front office said this week the sprain is trending better than the original 'low-grade but no timetable' read from late August, raising hope he's full-go for the opener. Jeanty's ADP had slid to around pick 18 on the earlier uncertainty — this is the first genuinely positive update since the injury and a buy signal if he's still available at that discount. Mike Washington Jr. remains the direct backup if he's held out of any practice time.",
     players: ["Ashton Jeanty", "Mike Washington Jr."]
-  },
-  {
-    date: "2026-08-27",
-    category: "injury",
-    tag: "Injury",
-    headline: "George Kittle activated off PUP, tracking ahead of schedule for Week 1",
-    detail: "San Francisco brought Kittle off the physically-unable-to-perform list Thursday, and he's working ahead of the typical Achilles-recovery timeline. He looks like a lock for the opener — buy with confidence at his current TE1-adjacent price rather than expecting him to open the year on a snap count.",
-    players: ["George Kittle", "Christian McCaffrey"]
-  },
-  {
-    date: "2026-08-27",
-    category: "injury",
-    tag: "Injury",
-    headline: "Alec Pierce comes off the PUP list, targeting a Week 1 return",
-    detail: "The Colts activated Pierce from PUP on Thursday after his summer ankle injury, and he's aiming to be full-go for the opener. Volume and route consistency are still the swing factor for his WR2/3 outlook behind a crowded Indianapolis passing game, but this clears the biggest hurdle to him playing Week 1 at all.",
-    players: ["Alec Pierce"]
   },
   {
     date: "2026-08-27",
@@ -641,12 +658,12 @@ const ENTRIES = [
     players: ["Trevor Lawrence", "Brian Thomas Jr."]
   },
   {
-    date: "2026-08-24",
+    date: "2026-09-06",
     category: "depth",
     tag: "Depth Chart",
-    headline: "Jonathon Brooks has locked down Carolina's backfield lead",
-    detail: "With Chuba Hubbard still working back from his hamstring strain, Brooks has taken almost every first-team rep — PFF's Week 2 preseason recap has him going 'all but two snaps with the starters' over Trevor Etienne and AJ Dillon. He's the Week 1 starter if Hubbard isn't fully cleared.",
-    players: ["Jonathon Brooks", "Chuba Hubbard", "Trevor Etienne"]
+    headline: "Chuba Hubbard expected to be ready for Carolina's Sept. 13 opener, but still being held out of practice reps",
+    detail: "Coach Dave Canales says he's confident the hamstring issue won't cost Hubbard the season opener against Chicago, but Carolina is still holding him out of full practice work and joint-practice reps as a precaution. Jonathon Brooks continues to mix in with Trevor Etienne and AJ Dillon in the meantime — worth rostering Brooks as a direct handcuff given how cautious the team is being with Hubbard this close to Week 1.",
+    players: ["Chuba Hubbard", "Jonathon Brooks", "Trevor Etienne"]
   },
   {
     date: "2026-08-23",
@@ -689,11 +706,11 @@ const ENTRIES = [
     players: ["Jaylen Waddle", "Evan Engram", "Bo Nix", "RJ Harvey"]
   },
   {
-    date: "2026-08-21",
+    date: "2026-09-02",
     category: "oline",
     tag: "O-Line",
-    headline: "Carolina opens the season without either starting tackle — Bryce Young's pocket is the worry",
-    detail: "Ikem Ekwonu is still working back from a ruptured patellar tendon and Taylor Moton is out after a blood clot was found in his lung. Free-agent import Rasheed Walker starts at left tackle with first-round rookie Monroe Freeling at right, a pairing that just dropped Carolina near the bottom of the updated line rankings. Fade the Panthers' pass game early and temper Chuba Hubbard's efficiency.",
+    headline: "Carolina's tackle situation is now official: Ekwonu and Moton are both out at least four games",
+    detail: "Ekwonu (knee) landed on reserve/PUP and Moton (illness, the lingering blood-clot issue) on reserve/NFI as part of final roster moves — both designations carry a mandatory four-game minimum absence, so this isn't a Week 1-only problem. Free-agent import Rasheed Walker starts at left tackle with first-round rookie Monroe Freeling at right through at least the first month. Fade the Panthers' pass game early and temper Chuba Hubbard's efficiency.",
     players: ["Bryce Young", "Tetairoa McMillan", "Chuba Hubbard"]
   },
   {
@@ -711,14 +728,6 @@ const ENTRIES = [
     headline: "Tyjae Spears out-snapping Tony Pollard in Tennessee's new offense",
     detail: "Under new OC Brian Daboll, Spears saw more preseason work than Pollard, hinting at a closer 50/50 committee rather than last year's 70/30 split toward Pollard. Worth tightening Spears' draft price a bit.",
     players: ["Tyjae Spears", "Tony Pollard"]
-  },
-  {
-    date: "2026-08-16",
-    category: "rookie",
-    tag: "Rookie",
-    headline: "Colbie Young pushing for Cincinnati's third receiver spot behind Chase and Higgins",
-    detail: "The fourth-round rookie split preseason snaps with Tee Higgins and got 12-personnel run, putting incumbent Andrei Iosivas' depth-chart spot in real jeopardy. Deep-league watch only for now behind two entrenched starters.",
-    players: ["Colbie Young", "Andrei Iosivas"]
   },
   {
     date: "2026-08-15",
@@ -896,7 +905,8 @@ const RANKINGS = [
   { rank: 14, prev: 14, name: "Brian Thomas Jr.", pos: "WR", team: "JAX" },
   { rank: 15, prev: 15, name: "De'Von Achane", pos: "RB", team: "MIA" },
   { rank: 16, prev: 16, name: "Derrick Henry", pos: "RB", team: "BAL" },
-  { rank: 17, prev: null, name: "MarShawn Lloyd", pos: "RB", team: "GB" },  { rank: 18, prev: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
+  { rank: 17, prev: 17, name: "MarShawn Lloyd", pos: "RB", team: "GB" },
+  { rank: 18, prev: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
   { rank: 19, prev: 19, name: "Drake London", pos: "WR", team: "ATL" },
   { rank: 20, prev: 20, name: "A.J. Brown", pos: "WR", team: "NE" },
   { rank: 21, prev: 21, name: "Trey McBride", pos: "TE", team: "ARI" },
@@ -965,7 +975,7 @@ const RANKINGS = [
   { rank: 84, prev: 84, name: "Christian Watson", pos: "WR", team: "GB" },
   { rank: 85, prev: 85, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
   { rank: 86, prev: 86, name: "Roman Wilson", pos: "WR", team: "PIT" },
-  { rank: 87, prev: 17, name: "Josh Jacobs", pos: "RB", team: "GB" },
+  { rank: 87, prev: 87, name: "Josh Jacobs", pos: "RB", team: "GB" },
   { rank: 88, prev: 88, name: "J.K. Dobbins", pos: "RB", team: "DEN" },
   { rank: 89, prev: 89, name: "Bo Nix", pos: "QB", team: "DEN" },
   { rank: 90, prev: 90, name: "Brock Purdy", pos: "QB", team: "SF" },
@@ -1003,7 +1013,7 @@ const RANKINGS = [
   { rank: 122, prev: 122, name: "Luther Burden III", pos: "WR", team: "CHI" },
   { rank: 123, prev: 123, name: "Marquise Brown", pos: "WR", team: "KC" },
   { rank: 124, prev: 124, name: "Jerome Ford", pos: "RB", team: "CLE" },
-  { rank: 125, prev: 87, name: "Kaleb Johnson", pos: "RB", team: "GB" },
+  { rank: 125, prev: 125, name: "Kaleb Johnson", pos: "RB", team: "GB" },
   { rank: 126, prev: 126, name: "Zamir White", pos: "RB", team: "LV" },
   { rank: 127, prev: 127, name: "Jaylen Wright", pos: "RB", team: "MIA" },
   { rank: 128, prev: 128, name: "Braelon Allen", pos: "RB", team: "NYJ" },
@@ -1088,7 +1098,7 @@ const VEGAS_RANKINGS = [
   { rank: 13, prevVegas: 13, consensus: 16, name: "Derrick Henry", pos: "RB", team: "BAL" },
   { rank: 14, prevVegas: 14, consensus: 13, name: "CeeDee Lamb", pos: "WR", team: "DAL" },
   { rank: 15, prevVegas: 15, consensus: 19, name: "Drake London", pos: "WR", team: "ATL" },
-  { rank: 16, prevVegas: null, consensus: 17, name: "MarShawn Lloyd", pos: "RB", team: "GB" },
+  { rank: 16, prevVegas: 16, consensus: 17, name: "MarShawn Lloyd", pos: "RB", team: "GB" },
   { rank: 17, prevVegas: 17, consensus: 18, name: "Saquon Barkley", pos: "RB", team: "PHI" },
   { rank: 18, prevVegas: 18, consensus: 20, name: "A.J. Brown", pos: "WR", team: "NE" },
   { rank: 19, prevVegas: 19, consensus: 14, name: "Brian Thomas Jr.", pos: "WR", team: "JAX" },
@@ -1159,7 +1169,7 @@ const VEGAS_RANKINGS = [
   { rank: 85, prevVegas: 85, consensus: 85, name: "Michael Pittman Jr.", pos: "WR", team: "PIT" },
   { rank: 86, prevVegas: 86, consensus: 86, name: "Roman Wilson", pos: "WR", team: "PIT" },
   { rank: 87, prevVegas: 87, consensus: 92, name: "Evan Engram", pos: "TE", team: "DEN" },
-  { rank: 88, prevVegas: 16, consensus: 87, name: "Josh Jacobs", pos: "RB", team: "GB" },
+  { rank: 88, prevVegas: 88, consensus: 87, name: "Josh Jacobs", pos: "RB", team: "GB" },
   { rank: 89, prevVegas: 89, consensus: 90, name: "Brock Purdy", pos: "QB", team: "SF" },
   { rank: 90, prevVegas: 90, consensus: 91, name: "Matthew Stafford", pos: "QB", team: "LAR" },
   { rank: 91, prevVegas: 91, consensus: 93, name: "Kyle Pitts", pos: "TE", team: "ATL" },
@@ -1195,7 +1205,7 @@ const VEGAS_RANKINGS = [
   { rank: 121, prevVegas: 121, consensus: 122, name: "Luther Burden III", pos: "WR", team: "CHI" },
   { rank: 122, prevVegas: 122, consensus: 123, name: "Marquise Brown", pos: "WR", team: "KC" },
   { rank: 123, prevVegas: 123, consensus: 124, name: "Jerome Ford", pos: "RB", team: "CLE" },
-  { rank: 124, prevVegas: 88, consensus: 125, name: "Kaleb Johnson", pos: "RB", team: "GB" },
+  { rank: 124, prevVegas: 124, consensus: 125, name: "Kaleb Johnson", pos: "RB", team: "GB" },
   { rank: 125, prevVegas: 125, consensus: 126, name: "Zamir White", pos: "RB", team: "LV" },
   { rank: 126, prevVegas: 126, consensus: 127, name: "Jaylen Wright", pos: "RB", team: "MIA" },
   { rank: 127, prevVegas: 127, consensus: 128, name: "Braelon Allen", pos: "RB", team: "NYJ" },
@@ -1288,10 +1298,10 @@ const PROP_LINES = [
     note: "Highest reception total on the board — underscores his elite floor in PPR formats regardless of matchup."
   },
   {
-    name: "David Montgomery", pos: "RB", team: "HOU",
-    market: "Regular Season Rushing TDs",
-    line: "O 7.5", odds: "-102",
-    note: "Books expect heavy goal-line usage in Houston — strong TD-equity signal for a player who can slide in drafts."
+    name: "Kenneth Walker III", pos: "RB", team: "KC",
+    market: "Regular Season Rushing Yards",
+    line: "O 924.5", odds: "-110",
+    note: "The move to Andy Reid's offense has books treating him as a legitimate bell-cow — one of the more team-context-driven lines on the board after the trade."
   },  {
     name: "Chase Brown", pos: "RB", team: "CIN",
     market: "Regular Season Rushing Yards",
@@ -1305,10 +1315,10 @@ const PROP_LINES = [
     note: "Worth flagging: the market leans toward some regression off last year's workload despite Taylor still being a locked-in starter."
   },
   {
-    name: "Davante Adams", pos: "WR", team: "LAR",
-    market: "Regular Season Receiving TDs",
-    line: "O 9.5", odds: "-110",
-    note: "Surprisingly high TD line for a veteran going in the middle rounds — a buy signal if he's slipping past his ADP."
+    name: "CeeDee Lamb", pos: "WR", team: "DAL",
+    market: "Regular Season Receptions",
+    line: "O 94.5", odds: "-110",
+    note: "Books see him back to a true target-hog role in Dallas' offense after an injury-shortened prior season — one of the safer PPR floors in this group."
   },
   {
     name: "Tee Higgins", pos: "WR", team: "CIN",
